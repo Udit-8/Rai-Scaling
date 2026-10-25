@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rai Scaling</title>
+<title>Rai Scaling | 10 Qualified Sales Calls for Coaches &amp; Consultants</title>
+<meta name="description" content="For coaches and consultants with ₹30K+ programs: a minimum of 10 qualified sales calls in 45 days, or we keep working free.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -20,858 +21,594 @@
     --border: #292924;
     --border-soft: #201f1c;
     --text: #f4f3ef;
-    --text-dim: #96958d;
-    --text-faint: #504f49;
+    --text-dim: #a3a299;
+    --text-faint: #5c5b54;
     --paper: #f3f1ec;
     --paper-border: #e2ded4;
     --ink: #15140f;
-    --ink-dim: #6b6a61;
+    --ink-dim: #5f5e56;
     --white: #ffffff;
+    --accent: #ec3013;
+    --good: #3fb37f;
     --max: 1160px;
     --display: 'Sora', 'Inter', system-ui, sans-serif;
     --body: 'Inter', system-ui, sans-serif;
   }
-
   *,*::before,*::after{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; scroll-padding-top:90px; }
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--body);
-    font-size:16px;
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
+  body{ margin:0; background:var(--bg); color:var(--text); font-family:var(--body); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   img{ max-width:100%; display:block; }
   a{ color:inherit; text-decoration:none; }
-  h1,h2,h3,h4{
-    font-family:var(--display);
-    margin:0;
-    letter-spacing:-0.02em;
-    text-wrap:balance;
-  }
+  h1,h2,h3,h4{ font-family:var(--display); margin:0; letter-spacing:-0.02em; text-wrap:balance; }
   p{ margin:0; }
   ul{ margin:0; padding:0; list-style:none; }
   button{ font-family:inherit; cursor:pointer; }
-
-  .wrap{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:0 32px;
-  }
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 32px; }
+  .narrow{ max-width:820px; }
   @media (max-width:640px){ .wrap{ padding:0 20px; } }
 
-  .eyebrow{
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--text-dim);
-  }
+  .eyebrow{ font-size:12px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-dim); }
+  .eyebrow.accent{ color:var(--accent); }
   .eyebrow.on-light{ color:var(--ink-dim); }
 
-  /* ---------- NAV ---------- */
-  .nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    background:rgba(10,10,9,0.86);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--border-soft);
-  }
-  .nav .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    height:76px;
-    gap:24px;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-family:var(--display);
-    font-weight:700;
-    font-size:17px;
-    letter-spacing:-0.01em;
-    white-space:nowrap;
-  }
-  .brand-mark{
-    width:32px;
-    height:32px;
-    border-radius:8px;
-    background:var(--white);
-    flex:none;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
+  /* NAV */
+  .nav{ position:sticky; top:0; z-index:50; background:rgba(10,10,9,0.88); backdrop-filter:blur(10px); border-bottom:1px solid var(--border-soft); }
+  .nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:72px; gap:24px; }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:700; font-size:17px; letter-spacing:-0.01em; white-space:nowrap; }
+  .brand-mark{ width:32px; height:32px; border-radius:8px; background:var(--white); flex:none; display:flex; align-items:center; justify-content:center; }
   .brand-mark svg{ width:58%; height:auto; display:block; }
-  .nav-links{
-    display:flex;
-    align-items:center;
-    gap:28px;
-    font-size:14px;
-    color:var(--text-dim);
-    font-weight:500;
-  }
+  .nav-links{ display:flex; align-items:center; gap:28px; font-size:14px; color:var(--text-dim); font-weight:500; }
   .nav-links a:hover{ color:var(--text); }
-  .nav-cta-group{ display:flex; align-items:center; gap:18px; }
-  .nav-right{ display:flex; align-items:center; gap:28px; }
 
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:12px 22px;
-    border-radius:8px;
-    font-weight:600;
-    font-size:14px;
-    border:1px solid transparent;
-    white-space:nowrap;
-    transition:transform .15s ease, background .15s ease, border-color .15s ease;
-  }
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 24px; border-radius:8px; font-weight:600; font-size:15px; border:1px solid transparent; white-space:nowrap; transition:transform .15s ease, background .15s ease, border-color .15s ease; }
   .btn:hover{ transform:translateY(-1px); }
   .btn-primary{ background:var(--white); color:#0a0a09; }
   .btn-primary:hover{ background:#e9e8e3; }
-  .btn-ghost{ border-color:var(--border); color:var(--text); }
-  .btn-ghost:hover{ border-color:#4a4a44; }
+  .btn-accent{ background:var(--accent); color:#fff; }
+  .btn-accent:hover{ background:#d42a10; }
   .btn-dark{ background:var(--ink); color:var(--paper); }
-  .btn-dark:hover{ background:#000; }
-  .btn svg{ width:14px; height:14px; }
+  .btn svg{ width:15px; height:15px; }
+  .btn-sm{ padding:10px 18px; font-size:14px; }
+  @media (max-width:760px){ .nav-links{ display:none; } }
+  @media (max-width:420px){ .nav .btn-sm{ padding:9px 12px; font-size:13px; } .brand{ font-size:15px; } }
 
-  .nav-mobile-cta{ display:none; }
-  .menu-toggle{
-    display:none;
-    width:36px; height:36px;
-    background:none; border:1px solid var(--border);
-    border-radius:8px;
-    color:var(--text);
-    align-items:center; justify-content:center;
-  }
+  section{ padding:96px 0; border-top:1px solid var(--border-soft); }
+  .sec-head{ max-width:720px; }
+  .sec-head h2{ margin-top:16px; font-size:clamp(1.9rem, 4vw, 2.7rem); font-weight:700; line-height:1.12; }
+  .sec-head p{ margin-top:18px; color:var(--text-dim); font-size:17px; line-height:1.7; }
+  .center{ text-align:center; margin-left:auto; margin-right:auto; }
+  .cta-row{ margin-top:44px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .cta-row.center{ justify-content:center; }
+  .cta-note{ font-size:14px; color:var(--text-dim); }
 
-  /* ---------- HERO ---------- */
-  .hero{
-    padding:96px 0 56px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero-bg-mark{
-    position:absolute;
-    right:-4%;
-    top:6%;
-    width:min(34vw, 460px);
-    z-index:0;
-    pointer-events:none;
-    user-select:none;
-  }
-  .hero-bg-mark svg{ width:100%; height:auto; display:block; }
-  .hero .wrap{ position:relative; z-index:1; }
-  .hero h1{
-    margin-top:22px;
-    font-size:clamp(2.4rem, 6.4vw, 4.6rem);
-    font-weight:800;
-    line-height:1.03;
-  }
-  .hero h1 .dim{ color:var(--text-faint); }
-  .hero-sub{
-    margin-top:28px;
-    max-width:620px;
-    font-size:18px;
-    line-height:1.6;
-    color:var(--text-dim);
-  }
-  .hero-trust{
-    margin-top:16px;
-    font-size:14px;
-    color:var(--text-dim);
-  }
-  .hero-trust a{
-    color:var(--text);
-    text-decoration:underline;
-    text-underline-offset:3px;
-  }
-  .hero-actions{
-    margin-top:24px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-  }
-  .hero-actions .btn-ghost{ background:var(--surface); }
+  /* HERO */
+  .hero{ padding:72px 0 80px; border-top:none; position:relative; overflow:hidden; }
+  .callout{ display:inline-block; padding:8px 14px; border:1px solid var(--accent); border-radius:100px; color:var(--text); font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; }
+  .hero h1{ margin-top:24px; font-size:clamp(2.2rem, 5.6vw, 4.1rem); font-weight:800; line-height:1.05; }
+  .hero h1 .dim{ display:block; margin-top:10px; color:var(--text-dim); font-size:0.52em; font-weight:600; line-height:1.25; }
+  .hero-sub{ margin:24px auto 0; max-width:680px; font-size:18px; line-height:1.65; color:var(--text-dim); }
+  .vsl{ margin:44px auto 0; max-width:900px; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--surface); box-shadow:0 30px 80px rgba(0,0,0,.45); }
+  .vsl-frame{ position:relative; padding-top:56.25%; }
+  .vsl-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .vsl-cap{ padding:12px 18px; font-size:13px; color:var(--text-dim); border-top:1px solid var(--border-soft); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
 
-  /* ---------- STATS ---------- */
-  .stats{
-    border-top:1px solid var(--border-soft);
-    border-bottom:1px solid var(--border-soft);
-    background:var(--bg-soft);
-  }
-  .stats .wrap{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    text-align:center;
-  }
-  .stat{
-    padding:30px 16px;
-    border-left:1px solid var(--border-soft);
-  }
-  .stat:first-child{ border-left:none; }
-  .stat b{
-    display:block;
-    font-family:var(--display);
-    font-size:clamp(1.5rem,3vw,2.1rem);
-    font-weight:700;
-    font-variant-numeric:tabular-nums;
-  }
-  .stat span{
-    display:block;
-    margin-top:6px;
-    font-size:13px;
-    color:var(--text-dim);
-  }
-  @media (max-width:640px){
-    .stats .wrap{ grid-template-columns:1fr; }
-    .stat{ border-left:none; border-top:1px solid var(--border-soft); }
-    .stat:first-child{ border-top:none; }
-  }
+  /* PROOF STRIP */
+  .proof-strip{ padding:0; background:var(--bg-soft); }
+  .proof-strip .wrap{ display:grid; grid-template-columns:repeat(3,1fr); text-align:center; }
+  .ps{ padding:30px 16px; border-left:1px solid var(--border-soft); }
+  .ps:first-child{ border-left:none; }
+  .ps b{ display:block; font-family:var(--display); font-size:clamp(1.4rem,2.8vw,2rem); font-weight:700; }
+  .ps span{ display:block; margin-top:6px; font-size:14px; color:var(--text-dim); }
+  @media (max-width:700px){ .proof-strip .wrap{ grid-template-columns:1fr; } .ps{ border-left:none; border-top:1px solid var(--border-soft); } .ps:first-child{ border-top:none; } }
 
-  /* ---------- SECTION HEADER ---------- */
-  section{ padding:104px 0; }
-  .sec-head{ max-width:680px; }
-  .sec-head h2{
-    margin-top:16px;
-    font-size:clamp(1.9rem, 4vw, 2.7rem);
-    font-weight:700;
-    line-height:1.12;
-  }
-  .sec-head p{
-    margin-top:18px;
-    color:var(--text-dim);
-    font-size:16px;
-    line-height:1.7;
-  }
-  .sec-head.on-light p{ color:var(--ink-dim); }
+  /* LEARNED FROM */
+  .learned{ background:var(--bg); }
+  .learned-grid{ margin-top:44px; display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:900px; }
+  .learned-grid figure{ margin:0; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--surface); }
+  .learned-grid img{ width:100%; height:auto; }
+  .learned-note{ margin-top:18px; font-size:12.5px; color:var(--text-faint); }
+  @media (max-width:640px){ .learned-grid{ grid-template-columns:1fr; } }
 
-  /* ---------- SERVICES ---------- */
-  .services{ background:var(--bg); border-top:1px solid var(--border-soft); }
-  .service-grid{
-    margin-top:52px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1px;
-    background:var(--border-soft);
-    border:1px solid var(--border-soft);
-  }
-  .service-card{
-    background:var(--bg);
-    padding:36px;
-    min-height:210px;
-    display:flex;
-    flex-direction:column;
-  }
-  .service-icon{
-    width:42px; height:42px;
-    border-radius:9px;
-    background:var(--surface);
-    border:1px solid var(--border);
-    display:flex; align-items:center; justify-content:center;
-    color:var(--text);
-  }
-  .service-icon svg{ width:20px; height:20px; }
-  .service-card h3{
-    margin-top:26px;
-    font-size:20px;
-    font-weight:700;
-  }
-  .service-card p{
-    margin-top:12px;
-    color:var(--text-dim);
-    font-size:15px;
-    line-height:1.65;
-  }
-  .service-tag{
-    margin-top:auto;
-    padding-top:20px;
-    font-size:12px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--text-faint);
-  }
-  .service-card.wide{
-    grid-column:1 / -1;
-    flex-direction:row;
-    align-items:flex-start;
-    gap:28px;
-    min-height:auto;
-  }
-  .service-card.wide .service-icon{ margin-top:2px; }
-  .service-card.wide .wide-body{ flex:1; }
-  .service-card.wide h3{ margin-top:0; }
-  @media (max-width:720px){
-    .service-grid{ grid-template-columns:1fr; }
-    .service-card.wide{ flex-direction:column; }
-  }
+  /* PROBLEM */
+  .problem-grid{ margin-top:48px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .pcard{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:32px; }
+  .pcard h3{ font-size:15px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-dim); font-family:var(--body); }
+  .pcard ul{ margin-top:20px; display:flex; flex-direction:column; gap:14px; }
+  .pcard li{ display:flex; gap:12px; font-size:16px; line-height:1.5; }
+  .pcard li::before{ content:""; flex:none; width:8px; height:8px; border-radius:50%; margin-top:8px; background:var(--text-faint); }
+  .pcard.bad li::before{ background:var(--accent); }
+  .chat{ margin-top:22px; display:flex; flex-direction:column; gap:10px; }
+  .bubble{ align-self:flex-start; background:var(--surface-2); border:1px solid var(--border); padding:10px 14px; border-radius:14px 14px 14px 4px; font-size:15px; }
+  .bubble small{ display:block; margin-top:2px; font-size:11px; color:var(--text-faint); text-align:right; }
+  .seen{ font-size:12px; color:var(--text-faint); }
+  .verdict{ margin-top:40px; font-family:var(--display); font-size:clamp(1.3rem,2.6vw,1.7rem); font-weight:700; }
+  .verdict span{ color:var(--accent); }
+  @media (max-width:760px){ .problem-grid{ grid-template-columns:1fr; } }
 
-  /* ---------- PROCESS ---------- */
-  .process{ background:var(--bg-soft); border-top:1px solid var(--border-soft); }
-  .steps{ margin-top:56px; }
-  .step{
-    display:grid;
-    grid-template-columns:120px 1fr 1fr;
-    gap:24px;
-    align-items:start;
-    padding:34px 0;
-    border-top:1px solid var(--border-soft);
-  }
-  .step:last-child{ border-bottom:1px solid var(--border-soft); }
-  .step-num{
-    font-family:var(--display);
-    font-weight:800;
-    font-size:2.2rem;
-    color:var(--text-faint);
-    font-variant-numeric:tabular-nums;
-  }
-  .step h3{ font-size:1.35rem; font-weight:700; align-self:center; }
-  .step p{ color:var(--text-dim); font-size:15px; line-height:1.65; align-self:center; }
-  @media (max-width:760px){
-    .step{ grid-template-columns:56px 1fr; }
-    .step p{ grid-column:2; }
-  }
+  /* REFRAME (light) */
+  .reframe{ background:var(--paper); color:var(--ink); text-align:center; padding:110px 0; border-top:none; }
+  .reframe .small{ font-family:var(--display); font-size:clamp(1.2rem,2.6vw,1.6rem); color:var(--ink-dim); font-weight:600; }
+  .reframe h2{ margin:14px auto 0; max-width:820px; font-size:clamp(2rem,5vw,3.2rem); font-weight:800; line-height:1.1; color:var(--ink); }
+  .reframe p.lead{ margin:22px auto 0; max-width:620px; color:var(--ink-dim); font-size:18px; line-height:1.65; }
 
-  /* ---------- PRICING ---------- */
-  .pricing{ background:var(--bg-soft); border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); }
-  .pricing-grid{
-    margin-top:52px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:24px;
-  }
-  .price-card{
-    position:relative;
-    background:var(--bg);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:40px 36px;
-    display:flex;
-    flex-direction:column;
-  }
-  .price-card.featured{ border-color:var(--white); background:var(--surface); }
-  .price-card .badge{
-    position:absolute;
-    top:-13px;
-    left:36px;
-    background:var(--white);
-    color:#0a0a09;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    padding:5px 12px;
-    border-radius:100px;
-  }
-  .price-name{ font-family:var(--display); font-size:1.2rem; font-weight:700; }
-  .price-desc{ margin-top:8px; color:var(--text-dim); font-size:14px; line-height:1.6; min-height:22px; }
-  .price-amount{ margin-top:24px; display:flex; align-items:baseline; gap:6px; }
-  .price-amount b{ font-family:var(--display); font-size:2.6rem; font-weight:800; }
-  .price-amount span{ color:var(--text-dim); font-size:14px; }
-  .price-features{ margin-top:28px; display:flex; flex-direction:column; gap:13px; flex:1; }
-  .price-features li{ display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-dim); line-height:1.5; }
-  .price-features li svg{ flex:none; width:16px; height:16px; margin-top:2px; color:var(--text); }
-  .price-features li.plus{ color:var(--text); font-weight:600; padding-bottom:2px; border-bottom:1px solid var(--border-soft); margin-bottom:2px; }
-  .price-note{ margin-top:22px; font-size:12.5px; color:var(--text-faint); line-height:1.6; }
-  .price-card .btn{ margin-top:24px; justify-content:center; }
-  @media (max-width:720px){ .pricing-grid{ grid-template-columns:1fr; } }
+  /* MECHANISM */
+  .mech{ margin-top:52px; display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border-soft); border:1px solid var(--border-soft); border-radius:14px; overflow:hidden; }
+  .mstep{ background:var(--bg); padding:36px 32px; }
+  .mnum{ font-family:var(--display); font-weight:800; font-size:14px; letter-spacing:0.14em; color:var(--accent); }
+  .mstep h3{ margin-top:14px; font-size:1.6rem; font-weight:800; }
+  .mstep p{ margin-top:12px; color:var(--text-dim); font-size:15.5px; line-height:1.65; }
+  .gates{ margin-top:18px; display:flex; flex-wrap:wrap; gap:8px; }
+  .gate{ font-size:12.5px; font-weight:600; padding:6px 10px; border:1px solid var(--border); border-radius:100px; color:var(--text); background:var(--surface); }
+  .mech-tag{ margin-top:36px; font-family:var(--display); font-size:1.15rem; font-weight:600; color:var(--text-dim); }
+  .mech-tag b{ color:var(--text); }
+  @media (max-width:860px){ .mech{ grid-template-columns:1fr; } }
 
-  /* ---------- WHY ---------- */
-  .why{ background:var(--bg); border-top:1px solid var(--border-soft); }
-  .why-grid{
-    margin-top:56px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:44px 48px;
-  }
-  .why-item{ display:flex; gap:20px; }
-  .why-icon{
-    flex:none;
-    width:44px; height:44px;
-    border-radius:9px;
-    background:var(--surface);
-    border:1px solid var(--border);
-    display:flex; align-items:center; justify-content:center;
-  }
-  .why-icon svg{ width:20px; height:20px; }
-  .why-item h4{ font-size:17px; font-weight:700; }
-  .why-item p{ margin-top:8px; color:var(--text-dim); font-size:15px; line-height:1.65; }
-  @media (max-width:720px){ .why-grid{ grid-template-columns:1fr; } }
+  /* HOLD US TO */
+  .holds{ margin-top:48px; display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .hold{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:28px; }
+  .hold b{ display:block; font-family:var(--display); font-size:2.1rem; font-weight:800; color:var(--white); }
+  .hold span{ display:block; margin-top:10px; color:var(--text-dim); font-size:15px; line-height:1.5; }
+  @media (max-width:900px){ .holds{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:520px){ .holds{ grid-template-columns:1fr; } }
 
-  /* ---------- INDUSTRIES ---------- */
-  .industries{ background:var(--bg-soft); border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); }
-  .tag-cloud{
-    margin-top:44px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-  .tag-pill{
-    padding:11px 20px;
-    border:1px solid var(--border);
-    border-radius:100px;
-    font-size:14px;
-    font-weight:500;
-    color:var(--text-dim);
-    background:var(--surface);
-  }
-  .region-line{
-    margin-top:28px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:var(--text-faint);
-    font-size:13px;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-  }
-  .region-line svg{ width:14px; height:14px; }
+  /* OFFER */
+  .offer-grid{ margin-top:52px; display:grid; grid-template-columns:1.35fr 1fr; gap:28px; align-items:start; }
+  .build-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .bcard{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:26px; }
+  .bcard h3{ font-size:1.1rem; font-weight:700; }
+  .bcard ul{ margin-top:14px; display:flex; flex-direction:column; gap:9px; }
+  .bcard li{ display:flex; gap:10px; font-size:14.5px; color:var(--text-dim); line-height:1.5; }
+  .bcard li svg{ flex:none; width:16px; height:16px; margin-top:2px; color:var(--good); }
+  .price{ position:sticky; top:96px; background:var(--surface); border:1px solid var(--white); border-radius:16px; padding:34px 30px; }
+  .price .eyebrow{ color:var(--accent); }
+  .price h3{ margin-top:12px; font-size:1.5rem; font-weight:800; }
+  .price-line{ margin-top:22px; padding-top:18px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:baseline; gap:16px; }
+  .price-line:first-of-type{ border-top:none; padding-top:0; }
+  .price-line span{ color:var(--text-dim); font-size:14px; max-width:60%; }
+  .price-line b{ font-family:var(--display); font-size:1.5rem; font-weight:800; text-align:right; }
+  .price-line b.big{ font-size:1.9rem; }
+  .price-note{ margin-top:18px; font-size:13px; color:var(--text-dim); line-height:1.6; }
+  .price .btn{ margin-top:24px; width:100%; }
+  @media (max-width:900px){ .offer-grid{ grid-template-columns:1fr; } .price{ position:static; } }
+  @media (max-width:560px){ .build-grid{ grid-template-columns:1fr; } }
 
-  /* ---------- BREATHER (light) ---------- */
-  .breather{
-    background:var(--paper);
-    color:var(--ink);
-    text-align:center;
-    padding:110px 0;
-  }
-  .breather h2{
-    font-size:clamp(1.8rem, 4.2vw, 2.6rem);
-    font-weight:700;
-    max-width:640px;
-    margin:0 auto;
-    color:var(--ink);
-  }
-  .breather .btn{ margin-top:36px; }
+  /* DIFFERENT */
+  .compare{ margin-top:48px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .ccol{ border-radius:14px; padding:32px; border:1px solid var(--border); }
+  .ccol.them{ background:var(--bg-soft); }
+  .ccol.us{ background:var(--surface); border-color:var(--white); }
+  .ccol h3{ font-size:1.2rem; font-weight:700; }
+  .ccol ul{ margin-top:20px; display:flex; flex-direction:column; gap:14px; }
+  .ccol li{ display:flex; gap:12px; font-size:15.5px; line-height:1.5; }
+  .ccol.them li{ color:var(--text-dim); }
+  .mark{ flex:none; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; }
+  .them .mark{ background:rgba(236,48,19,.14); color:var(--accent); }
+  .us .mark{ background:rgba(63,179,127,.16); color:var(--good); }
+  @media (max-width:760px){ .compare{ grid-template-columns:1fr; } }
 
-  /* ---------- FINAL CTA ---------- */
-  .final-cta{
-    background:var(--bg);
-    border-top:1px solid var(--border-soft);
-    padding:64px 0;
-  }
-  .final-cta .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-    flex-wrap:wrap;
-  }
-  .final-cta h2{ font-size:clamp(1.4rem,3vw,1.9rem); font-weight:700; max-width:520px; }
+  /* FIT */
+  .fit .compare .ccol.us h3::after{ content:""; }
 
-  /* ---------- FOOTER ---------- */
-  footer{ background:var(--bg); padding:72px 0 32px; }
-  .foot-top{
-    display:grid;
-    grid-template-columns:1.4fr 1fr 1fr;
-    gap:40px;
-  }
-  .foot-brand-mark{
-    display:flex; align-items:center; gap:12px;
-  }
-  .foot-brand-mark .brand-mark{ width:38px; height:38px; }
-  .foot-wordmark{
-    font-family:var(--display);
-    font-weight:800;
-    font-size:clamp(1.8rem,3.4vw,2.4rem);
-    line-height:1;
-  }
-  .foot-tag{ margin-top:18px; max-width:340px; color:var(--text-dim); font-size:15px; line-height:1.6; }
-  .foot-col h5{
-    font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
-    color:var(--text-faint); font-weight:600; margin-bottom:18px;
-  }
-  .foot-col ul{ display:flex; flex-direction:column; gap:12px; }
-  .foot-col a{ color:var(--text-dim); font-size:14px; }
-  .foot-col a:hover{ color:var(--text); }
-  .foot-socials{ display:flex; gap:10px; margin-top:18px; }
-  .foot-social{
-    width:36px; height:36px; border:1px solid var(--border); border-radius:8px;
-    display:flex; align-items:center; justify-content:center; color:var(--text-dim);
-  }
-  .foot-social svg{ width:16px; height:16px; }
-  .foot-bottom{
-    margin-top:64px;
-    padding-top:24px;
-    border-top:1px solid var(--border-soft);
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
-    font-size:13px;
-    color:var(--text-faint);
-  }
-  @media (max-width:760px){
-    .foot-top{ grid-template-columns:1fr 1fr; }
-    .foot-brand-mark{ grid-column:1 / -1; }
-  }
+  /* GUARANTEE */
+  .guarantee{ background:var(--bg-soft); }
+  .gbox{ margin-top:44px; border:1px solid var(--white); border-radius:18px; padding:44px; background:var(--surface); display:grid; grid-template-columns:1.3fr 1fr; gap:40px; }
+  .gbox h3{ font-size:clamp(1.5rem,3vw,2.1rem); font-weight:800; line-height:1.2; }
+  .gbox p.after{ margin-top:16px; color:var(--text-dim); font-size:17px; line-height:1.6; }
+  .gbox .cond h4{ font-family:var(--body); font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dim); font-weight:600; }
+  .gbox .cond ol{ margin:16px 0 0; padding-left:20px; display:flex; flex-direction:column; gap:10px; font-size:15px; line-height:1.5; }
+  .gbox .qual{ margin-top:18px; font-size:13.5px; color:var(--text-dim); line-height:1.6; }
+  @media (max-width:820px){ .gbox{ grid-template-columns:1fr; padding:30px; } }
 
-  /* ---------- MOBILE NAV ---------- */
-  @media (max-width:860px){
-    .nav-links{ display:none; }
-    .menu-toggle{ display:flex; }
-    .nav.open .nav-links{
-      display:flex;
-      position:absolute;
-      top:76px; left:0; right:0;
-      background:var(--bg);
-      border-bottom:1px solid var(--border-soft);
-      flex-direction:column;
-      align-items:flex-start;
-      gap:0;
-      padding:8px 20px 20px;
-    }
-    .nav.open .nav-links a{ padding:14px 0; width:100%; border-top:1px solid var(--border-soft); }
-    .nav-cta-group{ display:none; }
-    .nav-mobile-cta{
-      display:block;
-      margin-top:14px;
-      padding:13px 0;
-      text-align:center;
-      background:var(--white);
-      color:#0a0a09;
-      font-weight:600;
-      border-radius:8px;
-      border-top:none !important;
-    }
-  }
-  @media (max-width:520px){
-    .hero-actions .btn{ width:100%; justify-content:center; }
-  }
+  /* FAQ */
+  .faq-list{ margin-top:44px; border-top:1px solid var(--border); }
+  details{ border-bottom:1px solid var(--border); }
+  summary{ list-style:none; cursor:pointer; padding:22px 0; display:flex; justify-content:space-between; gap:20px; font-family:var(--display); font-weight:600; font-size:1.08rem; }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{ content:"+"; font-size:1.4rem; line-height:1; color:var(--text-dim); }
+  details[open] summary::after{ content:"\2013"; }
+  details p{ padding:0 0 22px; color:var(--text-dim); font-size:15.5px; line-height:1.7; max-width:760px; }
+
+  /* BOOK */
+  .book{ background:var(--paper); color:var(--ink); border-top:none; }
+  .book .sec-head h2{ color:var(--ink); }
+  .book .sec-head p{ color:var(--ink-dim); }
+  .book-steps{ margin:28px auto 0; max-width:760px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; text-align:left; }
+  .bstep{ background:#fff; border:1px solid var(--paper-border); border-radius:12px; padding:18px; font-size:14.5px; line-height:1.5; color:var(--ink); }
+  .bstep b{ display:block; font-family:var(--display); color:var(--accent); font-size:13px; letter-spacing:.1em; margin-bottom:6px; }
+  .calendar{ margin:40px auto 0; max-width:900px; background:#fff; border:1px solid var(--paper-border); border-radius:16px; overflow:hidden; }
+  .calendar iframe{ width:100%; min-height:760px; border:0; display:block; }
+  .cal-fallback{ margin-top:16px; text-align:center; font-size:14px; color:var(--ink-dim); }
+  .cal-fallback a{ text-decoration:underline; text-underline-offset:3px; color:var(--ink); }
+  @media (max-width:640px){ .book-steps{ grid-template-columns:1fr; } }
+
+  /* FOOTER */
+  footer{ background:var(--bg); padding:48px 0 36px; border-top:1px solid var(--border-soft); }
+  .foot{ display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; font-size:13.5px; color:var(--text-dim); }
+  .foot a:hover{ color:var(--text); }
+  .foot-links{ display:flex; gap:22px; }
 </style>
 </head>
 <body>
 
-
-<header class="nav" id="site-nav">
+<header class="nav">
   <div class="wrap">
     <a href="#top" class="brand"><span class="brand-mark"><svg viewBox="0 0 114 112" fill="none" stroke-linecap="butt" stroke-linejoin="miter"><polyline points="2,104 19,86 36,104" stroke="#201e1d" stroke-width="9"/><polyline points="41,104 58,71 75,104" stroke="#201e1d" stroke-width="9"/><polyline points="80,104 97,56 114,104" stroke="#ec3013" stroke-width="9"/></svg></span>RAI SCALING</a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#pricing">Pricing</a>
-      <a href="/results">Results</a>
-      <a href="#why-us">Why Us</a>
-      <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="nav-mobile-cta">Book a Free Call</a>
+      <a href="#system">How It Works</a>
+      <a href="#offer">The Offer</a>
+      <a href="#guarantee">Guarantee</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <div class="nav-right">
-      <div class="nav-cta-group">
-        <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-ghost">See How It Works</a>
-        <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a Free Call</a>
-      </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
+    <a href="#book" class="btn btn-primary btn-sm">Book My Strategy Call</a>
   </div>
 </header>
 
 <main>
+  <!-- 1. HERO -->
   <section class="hero" id="top">
-    <div class="hero-bg-mark"><svg viewBox="0 0 114 112" fill="none" stroke="var(--border-soft)" stroke-width="3" stroke-linecap="butt" stroke-linejoin="miter"><polyline points="2,104 19,86 36,104"/><polyline points="41,104 58,71 75,104"/><polyline points="80,104 97,56 114,104"/></svg></div>
-    <div class="wrap">
-      <p class="eyebrow">Meta Ads &amp; Growth Systems for Home Service Businesses</p>
-      <h1>We get you jobs.<br>Every lead worked.<br><span class="dim">Every single month.</span></h1>
-      <p class="hero-sub">Rai Scaling runs the Meta Ads that bring new jobs to your business, backed by the review engine, reactivation system, and CRM follow-up that make sure none of them slip through the cracks. Live in 48 hours.</p>
-      <p class="hero-trust">Got a text from us and want to know what this actually is? <a href="#pricing">See exactly what's included and what it costs &rarr;</a></p>
-      <div class="hero-actions">
-        <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a Free Strategy Call
+    <div class="wrap center" style="text-align:center">
+      <span class="callout">For coaches &amp; consultants with ₹30K+ programs</span>
+      <h1>A minimum of 10 qualified sales calls in 45 days.<span class="dim">Without posting reels every day or chasing referrals.</span></h1>
+      <p class="hero-sub">We sharpen your offer, run your Meta ads and filter every lead for budget, decision and timing, so only serious buyers reach your calendar.</p>
+
+      <div class="vsl">
+        <div class="vsl-frame">
+          <iframe src="https://www.loom.com/embed/7557eb0d68a84976bc27df27a906ccba?hide_owner=true&amp;hide_share=true&amp;hide_title=true&amp;hideEmbedTopBar=true" title="The 10-Call System: 7-minute overview" allow="fullscreen" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="vsl-cap"><span>▶ Watch first: how the 10-Call System works (7 min)</span><span>Then pick a slot below</span></div>
+      </div>
+
+      <div class="cta-row center">
+        <a href="#book" class="btn btn-accent">Book My Strategy Call
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="#services" class="btn btn-ghost">See What's Included</a>
       </div>
+      <p class="cta-note" style="margin-top:14px">30 minutes. We take 5 coaches a month.</p>
     </div>
   </section>
 
-  <section class="stats">
+  <!-- 2. IMMEDIATE PROOF -->
+  <section class="proof-strip" aria-label="Why trust us">
     <div class="wrap">
-      <div class="stat"><b>$50K+</b><span>Ad spend managed</span></div>
-      <div class="stat"><b>30+</b><span>Businesses scaled</span></div>
-      <div class="stat"><b>650+</b><span>Booked calls generated</span></div>
+      <div class="ps"><b>100%</b><span>yours: the ad account, the leads and the data</span></div>
+      <div class="ps"><b>3 gates</b><span>budget, decision and timing, checked on every lead</span></div>
+      <div class="ps"><b>10 calls</b><span>minimum in 45 days, or we keep working free</span></div>
     </div>
   </section>
 
-  <section class="services" id="services">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">What's included</p>
-        <h2>One system built to get you jobs.</h2>
-        <p>Rai Scaling runs the Meta campaigns that bring new leads in the door, then backs them with the reviews, reactivation, and follow-up that turn a full pipeline into a full calendar.</p>
-      </div>
-      <div class="service-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
-          </div>
-          <h3>Meta Ads &amp; Lead Generation</h3>
-          <p>High-intent campaigns that put your offer in front of homeowners who are ready to book &mdash; with every lead routed straight into your pipeline.</p>
-          <p class="service-tag">Campaign Setup / Creative / Lead Ads</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9 6.8 19.2l1-5.9L3.5 9.2l5.9-.8L12 3Z"/></svg>
-          </div>
-          <h3>Review &amp; Reputation Engine</h3>
-          <p>Every completed job triggers an automatic review request by SMS and email &mdash; so your Google rating keeps building without anyone chasing it down.</p>
-          <p class="service-tag">Automated Requests / Reminders / Tracking</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5m0 14h16M4 15l4-4 3 3 5-6 4 4"/></svg>
-          </div>
-          <h3>Past-Customer Reactivation</h3>
-          <p>Your customer list is an asset sitting untouched. We run monthly campaigns that turn old customers back into booked appointments.</p>
-          <p class="service-tag">Monthly Campaigns / SMS &amp; Email</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          </div>
-          <h3>CRM, Missed-Call Recovery &amp; Booking</h3>
-          <p>Every call, form, and message lands in one pipeline. Missed calls get an instant text back, and leads get followed up automatically until they book.</p>
-          <p class="service-tag">Pipeline / Missed-Call Text-Back / Reminders</p>
-        </div>
-        <div class="service-card wide">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-          </div>
-          <div class="wide-body">
-            <h3>SEO-Ready Website</h3>
-            <p>A mobile-first site built around your services and service area &mdash; quote form, click-to-call, and Google Business Profile connected from day one, so every ad has somewhere solid to land.</p>
-            <p class="service-tag">Home / Services / Service Areas / Contact</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="process" id="process">
+  <!-- 2b. LEARNED FROM -->
+  <section class="learned" id="learned">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">How it works</p>
-        <h2>From a strategy call to new jobs on your calendar.</h2>
+        <p class="eyebrow accent">Where the system comes from</p>
+        <h2>Built on what the world’s best client-acquisition operators do.</h2>
+        <p>We studied how creators and agency owners across the world fill their calendars, and rebuilt those systems for Indian coaches and consultants.</p>
       </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h3>Book Your Call</h3>
-          <p>We look at your business, service area, and what you're currently doing for leads and follow-up &mdash; then map out your system.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h3>We Launch Your Campaigns &amp; System</h3>
-          <p>Your Meta Ads, CRM, review engine, and reactivation campaigns get built, connected, and launched around your business specifically.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h3>You Go Live</h3>
-          <p>Typically within 48 hours of onboarding &mdash; you'll see exactly what's live before it goes live.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <h3>You Get The Jobs</h3>
-          <p>Leads get answered instantly, past customers get reactivated monthly, and new jobs land on your calendar &mdash; automatically.</p>
-        </div>
+      <div class="learned-grid">
+        <figure><img src="/img/eric-crutchfield.jpg" alt="Instagram profile of Eric Crutchfield" loading="lazy" width="1112" height="1094"></figure>
+        <figure><img src="/img/ravi-abuvala.jpg" alt="Instagram profile of Ravi Abuvala" loading="lazy" width="1112" height="1094"></figure>
       </div>
+      <p class="learned-note">Rai Scaling is independent and is not affiliated with or endorsed by the people shown.</p>
     </div>
   </section>
 
-  <section class="pricing" id="pricing">
+  <!-- 3. PROBLEM STACK -->
+  <section id="problem">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">What it costs</p>
-        <h2>Two plans. No setup fee. No surprises.</h2>
-        <p>We keep this simple on purpose &mdash; pick the plan that matches where your business is right now.</p>
+        <p class="eyebrow accent">Sound familiar?</p>
+        <h2>Your offer works. Your lead flow doesn’t.</h2>
       </div>
-      <div class="pricing-grid">
-        <div class="price-card">
-          <p class="price-name">Foundation</p>
-          <p class="price-desc">Get your marketing infrastructure installed.</p>
-          <div class="price-amount"><b>$297</b><span>/month</span></div>
-          <ul class="price-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>SEO-ready contractor website</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>CRM &amp; pipeline</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Automated review requests</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Past-customer reactivation</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Missed-call text back</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Lead follow-up automation</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Appointment booking &amp; reminders</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Basic monthly reporting</li>
+      <div class="problem-grid">
+        <div class="pcard">
+          <h3>You’re probably already</h3>
+          <ul>
+            <li>Posting reels and carousels most days</li>
+            <li>Waiting on referrals from past clients</li>
+            <li>Boosting posts or running DM ads</li>
+            <li>Taking free “discovery calls” with anyone who asks</li>
           </ul>
-          <p class="price-note">Best for: businesses that need the infrastructure in place before adding paid leads.</p>
-          <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-ghost">Book a Free Call</a>
         </div>
-        <div class="price-card featured">
-          <span class="badge">Most Popular</span>
-          <p class="price-name">Growth</p>
-          <p class="price-desc">Turn the system into a lead-generation engine.</p>
-          <div class="price-amount"><b>$497</b><span>/month</span></div>
-          <ul class="price-features">
-            <li class="plus">Everything in Foundation, plus:</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Meta Ads setup &amp; management</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>AI-assisted ad copy &amp; 3&ndash;5 creatives/month</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Lead qualification</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Campaign monitoring &amp; optimization</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Lost-lead &amp; estimate follow-up</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Advanced reporting</li>
+        <div class="pcard bad">
+          <h3>But</h3>
+          <ul>
+            <li>One great month is followed by two dead ones</li>
+            <li>Likes and views don’t turn into paying clients</li>
+            <li>Most leads can’t pay, won’t decide, or are “just exploring”</li>
+            <li>Booked calls don’t show up</li>
           </ul>
-          <p class="price-note">Ad spend billed separately, paid directly to Meta. Best for: businesses ready to generate new leads every month, not just work the ones they already have.</p>
-          <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a Free Call</a>
+          <div class="chat" aria-label="Example WhatsApp messages from unqualified leads">
+            <span class="bubble">Price bata do?<small>10:42 PM</small></span>
+            <span class="bubble">Send details.<small>11:05 AM</small></span>
+            <span class="bubble">Let me think about it.<small>6:18 PM</small></span>
+            <span class="seen">Your follow-up: seen, no reply</span>
+          </div>
         </div>
       </div>
+      <p class="verdict">That’s not a lead problem. <span>It’s a filter problem.</span></p>
     </div>
   </section>
 
-  <section class="why" id="why-us">
+  <!-- 4. REFRAME -->
+  <section class="reframe">
+    <div class="wrap">
+      <p class="small">You don’t need more leads.</p>
+      <h2>You need the right ones, checked before they reach you.</h2>
+      <p class="lead">Most ads teach Meta to find people who fill in forms. We teach it to find people who can buy, and we stop everyone else before they take up your evening.</p>
+    </div>
+  </section>
+
+  <!-- 5. MECHANISM -->
+  <section id="system">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Why Rai Scaling</p>
-        <h2>Built to get you jobs.</h2>
-        <p>Not just another marketing vendor &mdash; the team that turns your ad spend into appointments on your calendar.</p>
+        <p class="eyebrow accent">How it works</p>
+        <h2>The 10-Call System</h2>
+        <p>Three steps, one outcome: qualified buyers on your calendar.</p>
       </div>
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
-          <div>
-            <h4>We get you jobs, not just leads</h4>
-            <p>Every campaign is optimized toward one number: booked, showed-up appointments on your calendar &mdash; not clicks, and not cost-per-lead in isolation.</p>
-          </div>
+      <div class="mech">
+        <div class="mstep">
+          <p class="mnum">STEP 01</p>
+          <h3>Attract</h3>
+          <p>We turn what you sell into a clear promise with an outcome, a deadline and a guarantee. Then we write and run Meta ads aimed at the people who can actually buy it.</p>
         </div>
-        <div class="why-item">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></div>
-          <div>
-            <h4>One system, not five vendors</h4>
-            <p>Ads, CRM, reviews, and reactivation &mdash; all under one roof. No agencies pointing fingers at each other, and no black box you can't see into.</p>
-          </div>
+        <div class="mstep">
+          <p class="mnum">STEP 02</p>
+          <h3>Filter</h3>
+          <p>Every lead passes our 3-Gate Filter before it reaches you. Fail a gate, and the form ends politely. Pass all three, and they’re on your calendar.</p>
+          <div class="gates"><span class="gate">Budget</span><span class="gate">Decision-maker</span><span class="gate">Starting now</span></div>
         </div>
-        <div class="why-item">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
-          <div>
-            <h4>You see exactly what you're paying for</h4>
-            <p>Two plans, both listed with real prices on this page. No vague "marketing services" retainer, no surprise scope creep.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
-          <div>
-            <h4>Live in 48 hours</h4>
-            <p>Not a six-week build. Your system gets installed fast because it's built once and configured for your business, not designed from scratch.</p>
-          </div>
+        <div class="mstep">
+          <p class="mnum">STEP 03</p>
+          <h3>Convert</h3>
+          <p>Fast WhatsApp follow-up and reminders so people show up, plus a sales script built for Indian buyers. We review the numbers with you every week and tighten all three steps.</p>
         </div>
       </div>
+      <p class="mech-tag"><b>Find the right people. Filter out the rest.</b> Turn calls into clients.</p>
     </div>
   </section>
 
-  <section class="industries" id="industries">
+  <!-- 6. PROOF / WHAT YOU CAN HOLD US TO -->
+  <section id="hold-us">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Who we work with</p>
-        <h2>Built for the trades that keep homes running.</h2>
-        <p>If your business books jobs by the appointment, Rai Scaling has a system for it.</p>
+        <p class="eyebrow accent">Judge us on results</p>
+        <h2>What you can hold us to</h2>
+        <p>No vanity metrics. These are the commitments in your agreement.</p>
       </div>
-      <div class="tag-cloud">
-        <span class="tag-pill">Roofing</span>
-        <span class="tag-pill">HVAC</span>
-        <span class="tag-pill">Plumbing</span>
-        <span class="tag-pill">Foundation Repair</span>
-        <span class="tag-pill">Concrete &amp; Leveling</span>
-        <span class="tag-pill">Tree Service</span>
-        <span class="tag-pill">Outdoor Living</span>
-        <span class="tag-pill">Landscaping &amp; Hardscaping</span>
-        <span class="tag-pill">Electrical</span>
-        <span class="tag-pill">Pest Control</span>
-        <span class="tag-pill">Outdoor Lighting</span>
-        <span class="tag-pill">Garage Doors</span>
+      <div class="holds">
+        <div class="hold"><b>10+</b><span>qualified sales calls in 45 days, minimum</span></div>
+        <div class="hold"><b>3 / 3</b><span>gates passed by every call we put on your calendar</span></div>
+        <div class="hold"><b>Weekly</b><span>numbers: spend, leads, calls booked, show-ups, plus a review call</span></div>
+        <div class="hold"><b>100%</b><span>yours: the ad account, the leads and the data</span></div>
       </div>
-      <p class="region-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
-        Proudly serving home service businesses across the United States &amp; Canada
-      </p>
+      <div class="cta-row">
+        <a href="#book" class="btn btn-primary">See If I Qualify
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="breather">
+  <!-- 7. OFFER -->
+  <section id="offer">
     <div class="wrap">
-      <p class="eyebrow on-light">Free strategy call</p>
-      <h2>Ready to see what a full calendar feels like?</h2>
-      <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-dark">Book Your Free Strategy Call
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <div class="sec-head">
+        <p class="eyebrow accent">The offer</p>
+        <h2>Give us 45 days. We’ll put a minimum of 10 qualified buyers on your calendar.</h2>
+        <p>We build it with you, review the numbers with you, and help you make the decisions that get it working. Not a course. Not a template pack.</p>
+      </div>
+      <div class="offer-grid">
+        <div class="build-grid">
+          <div class="bcard">
+            <h3>Your offer</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>90-minute offer session</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>Promise, guarantee and positioning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>EMI-friendly payment setup</li>
+            </ul>
+          </div>
+          <div class="bcard">
+            <h3>Your ads</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>10 ad angles, written for you</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>Creatives and campaign build</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>Daily monitoring and testing</li>
+            </ul>
+          </div>
+          <div class="bcard">
+            <h3>Your filter</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>Lead form with the 3 gates</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>Lead scoring: hot, warm, not a fit</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>Booking page with your calendar</li>
+            </ul>
+          </div>
+          <div class="bcard">
+            <h3>Your calls</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>WhatsApp follow-up and reminders</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>Sales script + Indian objection bank</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7"/></svg>Weekly numbers and review call</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="price">
+          <p class="eyebrow">The 10-Call Guarantee</p>
+          <h3>45-day engagement</h3>
+          <div class="price-line" style="margin-top:22px;border-top:none;padding-top:0"><span>Shared on your strategy call</span><b class="big">One-time fee</b></div>
+          <div class="price-line"><span>Minimum ad spend, paid directly to Meta from your account</span><b>₹1,000/day</b></div>
+          <div class="price-line"><span>Of revenue from clients our ads bring you, for 90 days</span><b>10%</b></div>
+          <p class="price-note">No monthly retainer. We only earn more when you do.</p>
+          <a href="#book" class="btn btn-accent">Book My Strategy Call</a>
+        </aside>
+      </div>
     </div>
   </section>
 
-  <section class="final-cta" id="book-a-call">
+  <!-- 8. WHY DIFFERENT -->
+  <section id="different">
     <div class="wrap">
-      <h2>Ready to fill your calendar with booked jobs?</h2>
-      <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a Free Strategy Call
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <div class="sec-head">
+        <p class="eyebrow accent">Why this is different</p>
+        <h2>Most agencies sell you clicks. We guarantee calls.</h2>
+      </div>
+      <div class="compare">
+        <div class="ccol them">
+          <h3>Most agencies</h3>
+          <ul>
+            <li><span class="mark">✕</span>Charge a monthly retainer, results or not</li>
+            <li><span class="mark">✕</span>Report clicks, reach and cost per lead</li>
+            <li><span class="mark">✕</span>Send every form-filler to your WhatsApp</li>
+            <li><span class="mark">✕</span>Stop at the ad and leave the sales to you</li>
+          </ul>
+        </div>
+        <div class="ccol us">
+          <h3>The 10-Call System</h3>
+          <ul>
+            <li><span class="mark">✓</span>One fee, and a guarantee in writing</li>
+            <li><span class="mark">✓</span>Measured on qualified calls and show-ups</li>
+            <li><span class="mark">✓</span>Every lead filtered for budget, decision and timing</li>
+            <li><span class="mark">✓</span>Follow-up, reminders and a sales script included</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. WHO IT'S FOR -->
+  <section id="fit" class="fit">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow accent">Is this for you?</p>
+        <h2>We only take 5 coaches a month, so we’re picky.</h2>
+        <p>We write every ad and check every lead ourselves. That doesn’t scale past 5, so we only work with people we’re confident we can help.</p>
+      </div>
+      <div class="compare">
+        <div class="ccol us">
+          <h3>This is for you if</h3>
+          <ul>
+            <li><span class="mark">✓</span>You sell a coaching or consulting program of ₹30K or more</li>
+            <li><span class="mark">✓</span>You’ve already had at least 5 paying clients</li>
+            <li><span class="mark">✓</span>You can invest ₹1,000 a day in Meta ads</li>
+            <li><span class="mark">✓</span>You’ll take the sales calls yourself</li>
+          </ul>
+        </div>
+        <div class="ccol them">
+          <h3>It’s not for you if</h3>
+          <ul>
+            <li><span class="mark">✕</span>You’re still figuring out what to sell</li>
+            <li><span class="mark">✕</span>You want a shortcut with no work on your side</li>
+            <li><span class="mark">✕</span>You won’t follow up with leads or show up for calls</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. RISK REVERSAL -->
+  <section id="guarantee" class="guarantee">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow accent">The guarantee</p>
+        <h2>You don’t carry the risk. We do.</h2>
+      </div>
+      <div class="gbox">
+        <div>
+          <h3>Fewer than 10 qualified sales calls in 45 days? We keep working for free until you get them.</h3>
+          <p class="after">Still not there by day 90? We refund your fee.</p>
+          <p class="qual"><b style="color:var(--text)">A qualified call</b> is someone who passed all 3 gates (budget, decision-maker, starting within 30 days) and showed up to the call.</p>
+        </div>
+        <div class="cond">
+          <h4>The conditions (no fine print)</h4>
+          <ol>
+            <li>Ad spend of at least ₹1,000/day for the 45 days</li>
+            <li>You approve ads and copy within 48 hours</li>
+            <li>One hour from you in week 1 for setup</li>
+            <li>You take every booked call, using our script</li>
+            <li>You reply to leads within 24 hours</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FAQ -->
+  <section id="faq">
+    <div class="wrap narrow">
+      <div class="sec-head">
+        <p class="eyebrow accent">FAQ</p>
+        <h2>Questions coaches ask us</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How long until I get calls?</summary>
+          <p>We aim to have your ads live within about 7 days of your offer session. The guarantee runs for 45 days from launch.</p>
+        </details>
+        <details>
+          <summary>How much of my time does this take?</summary>
+          <p>A 90-minute offer session, about an hour in week 1, approving ads within 48 hours, a 30-minute weekly review, and taking the calls we book. We handle the rest.</p>
+        </details>
+        <details>
+          <summary>Is this done-for-you or done-with-you?</summary>
+          <p>Both. We write and run the ads, build the filter and set up follow-up for you. We shape the offer and review the numbers with you, because you know your clients best.</p>
+        </details>
+        <details>
+          <summary>Who pays for the ads, and how much?</summary>
+          <p>You do, directly to Meta from your own ad account: at least ₹1,000 a day. That money never passes through us, and the account stays yours.</p>
+        </details>
+        <details>
+          <summary>What counts as a “qualified” call?</summary>
+          <p>Someone who passed all three gates (they can afford your program, they make the decision, and they want to start within 30 days) and who actually shows up to the call.</p>
+        </details>
+        <details>
+          <summary>What happens after the 45 days?</summary>
+          <p>You keep everything we built. If you want us to keep running and improving it, we’ll talk through the options before the 45 days end. There’s no lock-in.</p>
+        </details>
+        <details>
+          <summary>What happens after I book a call?</summary>
+          <p>We look at your offer and your current lead flow, find what’s stopping consistent high-ticket clients, and map out your first 45 days. If we can genuinely help, we’ll show you how we’d work together. If not, you keep the plan.</p>
+        </details>
+        <details>
+          <summary>Do I need a team or existing ads?</summary>
+          <p>No. You need a program of ₹30K or more that has already sold to at least 5 clients, and the time to take your calls.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FINAL CTA + BOOKING -->
+  <section id="book" class="book">
+    <div class="wrap">
+      <div class="sec-head center" style="text-align:center">
+        <p class="eyebrow on-light">Book your strategy call</p>
+        <h2>Ready for 10 qualified calls in 45 days?</h2>
+        <p>If you’re a coach or consultant with a ₹30K+ program and want a calendar full of serious buyers, pick a slot below.</p>
+      </div>
+      <div class="book-steps">
+        <div class="bstep"><b>01</b>We look at your offer and current lead flow</div>
+        <div class="bstep"><b>02</b>We find what’s stopping consistent high-ticket clients</div>
+        <div class="bstep"><b>03</b>We map your first 45 days, and show how we’d work together if it’s a fit</div>
+      </div>
+      <div class="calendar">
+        <iframe src="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" title="Book a 30-minute strategy call" scrolling="no" id="NAvNpIeQeo2RboNvb9HU_booking"></iframe>
+      </div>
+      <p class="cal-fallback">Calendar not loading? <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" target="_blank" rel="noopener">Open the booking page</a></p>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="foot-top">
-      <div>
-        <div class="foot-brand-mark">
-          <span class="brand-mark"><svg viewBox="0 0 114 112" fill="none" stroke-linecap="butt" stroke-linejoin="miter"><polyline points="2,104 19,86 36,104" stroke="#201e1d" stroke-width="9"/><polyline points="41,104 58,71 75,104" stroke="#201e1d" stroke-width="9"/><polyline points="80,104 97,56 114,104" stroke="#ec3013" stroke-width="9"/></svg></span>
-        </div>
-        <div class="foot-wordmark">RAI<br>SCALING</div>
-        <p class="foot-tag">Meta Ads, reviews, reactivation, and follow-up &mdash; installed as one system to get home service businesses more jobs across the U.S. &amp; Canada.</p>
-        <div class="foot-socials">
-          <a class="foot-social" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a class="foot-social" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 0 1 5 0V17"/></svg></a>
-          <a class="foot-social" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z"/></svg></a>
-        </div>
-      </div>
-      <div class="foot-col">
-        <h5>Sitemap</h5>
-        <ul>
-          <li><a href="#top">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="/results">Results</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#industries">Industries</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h5>Connect</h5>
-        <ul>
-          <li><a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU">Book a Free Call</a></li>
-          <li><a href="mailto:hello@raiscaling.com">hello@raiscaling.com</a></li>
-          <li><a href="#">United States &amp; Canada</a></li>
-        </ul>
-      </div>
+  <div class="wrap foot">
+    <a href="#top" class="brand"><span class="brand-mark"><svg viewBox="0 0 114 112" fill="none" stroke-linecap="butt" stroke-linejoin="miter"><polyline points="2,104 19,86 36,104" stroke="#201e1d" stroke-width="9"/><polyline points="41,104 58,71 75,104" stroke="#201e1d" stroke-width="9"/><polyline points="80,104 97,56 114,104" stroke="#ec3013" stroke-width="9"/></svg></span>RAI SCALING</a>
+    <div class="foot-links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="#book">Book a Call</a>
     </div>
-    <div class="foot-bottom">
-      <span>&copy; 2026 Rai Scaling. All rights reserved.</span>
-      <span>Built to get you more jobs.</span>
-    </div>
+    <span>&copy; 2026 Rai Scaling. All rights reserved.</span>
   </div>
 </footer>
 
-<script>
-  (function(){
-    var nav = document.getElementById('site-nav');
-    var toggle = document.getElementById('menuToggle');
-    toggle.addEventListener('click', function(){
-      var isOpen = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-    nav.querySelectorAll('.nav-links a').forEach(function(a){
-      a.addEventListener('click', function(){ nav.classList.remove('open'); });
-    });
-  })();
-</script>
-
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,9 +1,10 @@
 # Rai Scaling website
 
-Static site for [raiscaling.com](https://raiscaling.com) — two self-contained HTML pages, no build step.
+Static site for [raiscaling.com](https://raiscaling.com) — self-contained HTML pages, no build step.
 
-- `index.html` — homepage
-- `results.html` — served at `/results` (see `vercel.json` → `cleanUrls`)
+- `index.html` — homepage: landing page for Indian coaches & consultants (VSL + booking calendar)
+- `privacy.html` — privacy policy, served at `/privacy` (link this in Meta lead forms)
+- `results.html` — older home-services results page, served at `/results` (no longer linked from the homepage)
 
 ## Local preview
 
