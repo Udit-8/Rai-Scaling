@@ -101,6 +101,14 @@
   .ps span{ display:block; margin-top:6px; font-size:14px; color:var(--text-dim); }
   @media (max-width:700px){ .proof-strip .wrap{ grid-template-columns:1fr; } .ps{ border-left:none; border-top:1px solid var(--border-soft); } .ps:first-child{ border-top:none; } }
 
+  /* LEARNED FROM */
+  .learned{ background:var(--bg); }
+  .learned-grid{ margin-top:44px; display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:900px; }
+  .learned-grid figure{ margin:0; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--surface); }
+  .learned-grid img{ width:100%; height:auto; }
+  .learned-note{ margin-top:18px; font-size:12.5px; color:var(--text-faint); }
+  @media (max-width:640px){ .learned-grid{ grid-template-columns:1fr; } }
+
   /* PROBLEM */
   .problem-grid{ margin-top:48px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
   .pcard{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:32px; }
@@ -158,7 +166,7 @@
   .price-line:first-of-type{ border-top:none; padding-top:0; }
   .price-line span{ color:var(--text-dim); font-size:14px; max-width:60%; }
   .price-line b{ font-family:var(--display); font-size:1.5rem; font-weight:800; text-align:right; }
-  .price-line b.big{ font-size:2.4rem; }
+  .price-line b.big{ font-size:1.9rem; }
   .price-note{ margin-top:18px; font-size:13px; color:var(--text-dim); line-height:1.6; }
   .price .btn{ margin-top:24px; width:100%; }
   @media (max-width:900px){ .offer-grid{ grid-template-columns:1fr; } .price{ position:static; } }
@@ -262,9 +270,25 @@
   <!-- 2. IMMEDIATE PROOF -->
   <section class="proof-strip" aria-label="Why trust us">
     <div class="wrap">
-      <div class="ps"><b>10,000+</b><span>users on a product we built and grew from zero</span></div>
+      <div class="ps"><b>100%</b><span>yours: the ad account, the leads and the data</span></div>
       <div class="ps"><b>3 gates</b><span>budget, decision and timing, checked on every lead</span></div>
       <div class="ps"><b>10 calls</b><span>minimum in 45 days, or we keep working free</span></div>
+    </div>
+  </section>
+
+  <!-- 2b. LEARNED FROM -->
+  <section class="learned" id="learned">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow accent">Where the system comes from</p>
+        <h2>Built on what the world’s best client-acquisition operators do.</h2>
+        <p>We studied how creators and agency owners across the world fill their calendars, and rebuilt those systems for Indian coaches and consultants.</p>
+      </div>
+      <div class="learned-grid">
+        <figure><img src="/img/eric-crutchfield.jpg" alt="Instagram profile of Eric Crutchfield" loading="lazy" width="1112" height="1094"></figure>
+        <figure><img src="/img/ravi-abuvala.jpg" alt="Instagram profile of Ravi Abuvala" loading="lazy" width="1112" height="1094"></figure>
+      </div>
+      <p class="learned-note">Rai Scaling is independent and is not affiliated with or endorsed by the people shown.</p>
     </div>
   </section>
 
@@ -412,7 +436,7 @@
         <aside class="price">
           <p class="eyebrow">The 10-Call Guarantee</p>
           <h3>45-day engagement</h3>
-          <div class="price-line" style="margin-top:22px;border-top:none;padding-top:0"><span>One-time fee</span><b class="big">₹19,999</b></div>
+          <div class="price-line" style="margin-top:22px;border-top:none;padding-top:0"><span>Shared on your strategy call</span><b class="big">One-time fee</b></div>
           <div class="price-line"><span>Minimum ad spend, paid directly to Meta from your account</span><b>₹1,000/day</b></div>
           <div class="price-line"><span>Of revenue from clients our ads bring you, for 90 days</span><b>10%</b></div>
           <p class="price-note">No monthly retainer. We only earn more when you do.</p>
@@ -492,7 +516,7 @@
       <div class="gbox">
         <div>
           <h3>Fewer than 10 qualified sales calls in 45 days? We keep working for free until you get them.</h3>
-          <p class="after">Still not there by day 90? We refund your ₹19,999 fee.</p>
+          <p class="after">Still not there by day 90? We refund your fee.</p>
           <p class="qual"><b style="color:var(--text)">A qualified call</b> is someone who passed all 3 gates (budget, decision-maker, starting within 30 days) and showed up to the call.</p>
         </div>
         <div class="cond">
