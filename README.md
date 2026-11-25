@@ -1,9 +1,11 @@
 # Rai Scaling website
 
-Static site for [raiscaling.com](https://raiscaling.com) — two self-contained HTML pages, no build step.
+Static site for [raiscaling.com](https://raiscaling.com) — one self-contained HTML page, no build step.
 
 - `index.html` — homepage
-- `results.html` — served at `/results` (see `vercel.json` → `cleanUrls`)
+- `privacy.html` — privacy policy, served at `/privacy` (linked from the footer and used for Meta lead forms)
+- `images/` — ad examples and client dashboard screenshots used on the homepage
+- `/results` redirects to the homepage's previous-work section (see `vercel.json`)
 
 ## Local preview
 
@@ -22,6 +24,6 @@ auto-deploys.
 
 ## Editing
 
-Both pages are single self-contained files (styles and scripts inline). Find the "Book a Free Call" links by
+The page is a single self-contained file (styles and scripts inline), with images in `images/`. Find the "Book a Free Call" links by
 searching for `book-a-call` — there's an HTML comment above the final CTA section in each file marking where to
 swap in the real GoHighLevel calendar URL once it's ready.

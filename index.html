@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rai Scaling</title>
+<title>Rai Scaling | Meta Ads Done For You, £197/month</title>
+<meta name="description" content="Facebook and Instagram ads, done for you, for UK local service businesses. £197/month flat. No contract, no setup fee, no cut of your ad spend, 14-day money-back guarantee.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -27,6 +28,7 @@
     --ink: #15140f;
     --ink-dim: #6b6a61;
     --white: #ffffff;
+    --accent: #ec3013;
     --max: 1160px;
     --display: 'Sora', 'Inter', system-ui, sans-serif;
     --body: 'Inter', system-ui, sans-serif;
@@ -71,6 +73,8 @@
     color:var(--text-dim);
   }
   .eyebrow.on-light{ color:var(--ink-dim); }
+
+  .tick{ flex:none; width:16px; height:16px; margin-top:2px; color:var(--accent); }
 
   /* ---------- NAV ---------- */
   .nav{
@@ -118,7 +122,7 @@
     font-weight:500;
   }
   .nav-links a:hover{ color:var(--text); }
-  .nav-cta-group{ display:flex; align-items:center; gap:18px; }
+  .nav-cta-group{ display:flex; align-items:center; gap:12px; }
   .nav-right{ display:flex; align-items:center; gap:28px; }
 
   .btn{
@@ -140,6 +144,8 @@
   .btn-ghost:hover{ border-color:#4a4a44; }
   .btn-dark{ background:var(--ink); color:var(--paper); }
   .btn-dark:hover{ background:#000; }
+  .btn-outline-dark{ border-color:var(--ink); color:var(--ink); }
+  .btn-outline-dark:hover{ background:rgba(21,20,15,0.06); }
   .btn svg{ width:14px; height:14px; }
 
   .nav-mobile-cta{ display:none; }
@@ -154,37 +160,69 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    padding:96px 0 56px;
+    padding:88px 0 72px;
     position:relative;
     overflow:hidden;
   }
-  .hero-bg-mark{
-    position:absolute;
-    right:-4%;
-    top:6%;
-    width:min(34vw, 460px);
-    z-index:0;
-    pointer-events:none;
-    user-select:none;
+  .hero .wrap{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:1.25fr 1fr;
+    gap:56px;
+    align-items:center;
   }
-  .hero-bg-mark svg{ width:100%; height:auto; display:block; }
-  .hero .wrap{ position:relative; z-index:1; }
+  .hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 14px;
+    border:1px solid var(--border);
+    border-radius:100px;
+    background:var(--surface);
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--text-dim);
+  }
+  .hero-badge .dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); }
   .hero h1{
     margin-top:22px;
-    font-size:clamp(2.4rem, 6.4vw, 4.6rem);
+    font-size:clamp(2.3rem, 5.4vw, 4rem);
     font-weight:800;
-    line-height:1.03;
+    line-height:1.04;
   }
   .hero h1 .dim{ color:var(--text-faint); }
   .hero-sub{
-    margin-top:28px;
-    max-width:620px;
+    margin-top:24px;
+    max-width:580px;
     font-size:18px;
     line-height:1.6;
     color:var(--text-dim);
   }
-  .hero-trust{
+  .hero-sub b{ color:var(--text); font-weight:600; }
+  .hero-checks{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 20px;
+    max-width:520px;
+  }
+  .hero-checks li{ display:flex; gap:10px; font-size:15px; font-weight:500; }
+  .hero-actions{
+    margin-top:32px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .hero-actions .btn-ghost{ background:var(--surface); }
+  .fine{
     margin-top:16px;
+    font-size:13px;
+    color:var(--text-faint);
+    line-height:1.6;
+  }
+  .hero-trust{
+    margin-top:10px;
     font-size:14px;
     color:var(--text-dim);
   }
@@ -193,52 +231,100 @@
     text-decoration:underline;
     text-underline-offset:3px;
   }
-  .hero-actions{
-    margin-top:24px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-  }
-  .hero-actions .btn-ghost{ background:var(--surface); }
 
-  /* ---------- STATS ---------- */
-  .stats{
+  /* hero offer poster */
+  .poster{
+    position:relative;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:36px 32px 30px;
+    overflow:hidden;
+  }
+  .poster-mark{
+    position:absolute;
+    right:-30px; top:-18px;
+    width:220px;
+    pointer-events:none;
+  }
+  .poster-mark svg{ width:100%; height:auto; display:block; }
+  .poster .eyebrow{ position:relative; }
+  .poster-title{
+    position:relative;
+    margin-top:14px;
+    font-family:var(--display);
+    font-weight:800;
+    font-size:clamp(1.8rem,3vw,2.3rem);
+    line-height:1.05;
+    letter-spacing:-0.02em;
+  }
+  .poster-price{
+    position:relative;
+    margin-top:22px;
+    display:flex;
+    align-items:baseline;
+    gap:6px;
+  }
+  .poster-price b{ font-family:var(--display); font-size:3.6rem; font-weight:800; line-height:1; letter-spacing:-0.03em; }
+  .poster-price span{ color:var(--text-dim); font-size:15px; }
+  .poster-note{ margin-top:8px; font-size:13px; color:var(--text-dim); }
+  .poster ul{
+    margin-top:24px;
+    padding-top:22px;
+    border-top:1px solid var(--border);
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .poster li{ display:flex; gap:10px; font-size:14.5px; }
+  .poster .btn{ margin-top:26px; width:100%; justify-content:center; }
+
+  @media (max-width:900px){
+    .hero .wrap{ grid-template-columns:1fr; gap:48px; }
+  }
+  @media (max-width:520px){
+    .hero-checks{ grid-template-columns:1fr; }
+    .hero-actions .btn{ width:100%; justify-content:center; }
+  }
+
+  /* ---------- POSITIONING STRIP ---------- */
+  .strip{
     border-top:1px solid var(--border-soft);
     border-bottom:1px solid var(--border-soft);
     background:var(--bg-soft);
+    padding:0;
   }
-  .stats .wrap{
+  .strip .wrap{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
     text-align:center;
   }
-  .stat{
-    padding:30px 16px;
+  .strip-item{
+    padding:26px 12px;
     border-left:1px solid var(--border-soft);
-  }
-  .stat:first-child{ border-left:none; }
-  .stat b{
-    display:block;
     font-family:var(--display);
-    font-size:clamp(1.5rem,3vw,2.1rem);
     font-weight:700;
-    font-variant-numeric:tabular-nums;
+    font-size:clamp(1rem,1.8vw,1.2rem);
   }
-  .stat span{
+  .strip-item:first-child{ border-left:none; }
+  .strip-item span{
     display:block;
-    margin-top:6px;
+    margin-top:4px;
+    font-family:var(--body);
+    font-weight:400;
     font-size:13px;
     color:var(--text-dim);
   }
-  @media (max-width:640px){
-    .stats .wrap{ grid-template-columns:1fr; }
-    .stat{ border-left:none; border-top:1px solid var(--border-soft); }
-    .stat:first-child{ border-top:none; }
+  @media (max-width:720px){
+    .strip .wrap{ grid-template-columns:1fr 1fr; }
+    .strip-item:nth-child(3){ border-left:none; }
+    .strip-item:nth-child(n+3){ border-top:1px solid var(--border-soft); }
   }
 
   /* ---------- SECTION HEADER ---------- */
   section{ padding:104px 0; }
   .sec-head{ max-width:680px; }
+  .sec-head.center{ margin:0 auto; text-align:center; }
   .sec-head h2{
     margin-top:16px;
     font-size:clamp(1.9rem, 4vw, 2.7rem);
@@ -251,22 +337,22 @@
     font-size:16px;
     line-height:1.7;
   }
+  .sec-head.on-light h2{ color:var(--ink); }
   .sec-head.on-light p{ color:var(--ink-dim); }
 
-  /* ---------- SERVICES ---------- */
-  .services{ background:var(--bg); border-top:1px solid var(--border-soft); }
+  /* ---------- WHAT YOU GET ---------- */
+  .services{ background:var(--bg); }
   .service-grid{
     margin-top:52px;
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
     gap:1px;
     background:var(--border-soft);
     border:1px solid var(--border-soft);
   }
   .service-card{
     background:var(--bg);
-    padding:36px;
-    min-height:210px;
+    padding:34px 32px;
     display:flex;
     flex-direction:column;
   }
@@ -280,8 +366,8 @@
   }
   .service-icon svg{ width:20px; height:20px; }
   .service-card h3{
-    margin-top:26px;
-    font-size:20px;
+    margin-top:24px;
+    font-size:19px;
     font-weight:700;
   }
   .service-card p{
@@ -290,108 +376,198 @@
     font-size:15px;
     line-height:1.65;
   }
-  .service-tag{
-    margin-top:auto;
-    padding-top:20px;
-    font-size:12px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--text-faint);
+  .extras-note{
+    margin-top:28px;
+    padding:20px 24px;
+    border:1px dashed var(--border);
+    border-radius:12px;
+    color:var(--text-dim);
+    font-size:14.5px;
+    line-height:1.65;
   }
-  .service-card.wide{
-    grid-column:1 / -1;
-    flex-direction:row;
-    align-items:flex-start;
-    gap:28px;
-    min-height:auto;
+  .extras-note b{ color:var(--text); font-weight:600; }
+  @media (max-width:900px){ .service-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:620px){ .service-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- AGENCY VS US ---------- */
+  .compare{ background:var(--bg-soft); border-top:1px solid var(--border-soft); }
+  .compare-table{
+    margin-top:52px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
   }
-  .service-card.wide .service-icon{ margin-top:2px; }
-  .service-card.wide .wide-body{ flex:1; }
-  .service-card.wide h3{ margin-top:0; }
-  @media (max-width:720px){
-    .service-grid{ grid-template-columns:1fr; }
-    .service-card.wide{ flex-direction:column; }
+  .compare-row{
+    display:grid;
+    grid-template-columns:1.1fr 1fr 1fr;
+    border-top:1px solid var(--border-soft);
   }
+  .compare-row:first-child{ border-top:none; }
+  .compare-row > div{
+    padding:18px 24px;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .compare-row > div:first-child{ color:var(--text-dim); }
+  .compare-row > div:nth-child(2){ color:var(--text-dim); border-left:1px solid var(--border-soft); }
+  .compare-row > div:nth-child(3){ background:var(--surface); font-weight:600; border-left:1px solid var(--border); }
+  .compare-row.head > div{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:15px;
+    color:var(--text);
+    padding-top:20px; padding-bottom:20px;
+  }
+  .compare-row .x{ flex:none; width:15px; height:15px; color:var(--text-faint); }
+  @media (max-width:640px){
+    .compare-row{ grid-template-columns:1fr 1fr; }
+    .compare-row > div:first-child{
+      grid-column:1 / -1;
+      padding-bottom:4px;
+      font-size:12px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:var(--text-faint);
+    }
+    .compare-row > div:nth-child(2){ border-left:none; }
+    .compare-row.head > div:first-child{ display:none; }
+    .compare-row > div{ padding:14px 16px; font-size:14px; }
+  }
+
+  /* ---------- WHO IT'S FOR ---------- */
+  .industries{ background:var(--bg); border-top:1px solid var(--border-soft); }
+  .trade-grid{
+    margin-top:52px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+  }
+  .trade-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:24px 20px;
+  }
+  .trade-card svg{ width:22px; height:22px; color:var(--text); }
+  .trade-card h3{ margin-top:18px; font-size:16px; font-weight:700; }
+  .trade-card p{ margin-top:6px; font-size:13.5px; color:var(--text-dim); line-height:1.55; }
+  .also{
+    margin-top:28px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px;
+  }
+  .also .label{ font-size:13px; color:var(--text-faint); margin-right:6px; }
+  .tag-pill{
+    padding:8px 16px;
+    border:1px solid var(--border);
+    border-radius:100px;
+    font-size:13.5px;
+    font-weight:500;
+    color:var(--text-dim);
+  }
+  @media (max-width:980px){ .trade-grid{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:620px){ .trade-grid{ grid-template-columns:1fr 1fr; } }
 
   /* ---------- PROCESS ---------- */
   .process{ background:var(--bg-soft); border-top:1px solid var(--border-soft); }
   .steps{ margin-top:56px; }
   .step{
     display:grid;
-    grid-template-columns:120px 1fr 1fr;
+    grid-template-columns:150px 1fr 1fr;
     gap:24px;
     align-items:start;
-    padding:34px 0;
+    padding:32px 0;
     border-top:1px solid var(--border-soft);
   }
   .step:last-child{ border-bottom:1px solid var(--border-soft); }
   .step-num{
     font-family:var(--display);
-    font-weight:800;
-    font-size:2.2rem;
-    color:var(--text-faint);
-    font-variant-numeric:tabular-nums;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    padding-top:6px;
   }
-  .step h3{ font-size:1.35rem; font-weight:700; align-self:center; }
-  .step p{ color:var(--text-dim); font-size:15px; line-height:1.65; align-self:center; }
+  .step h3{ font-size:1.3rem; font-weight:700; }
+  .step p{ color:var(--text-dim); font-size:15px; line-height:1.65; }
+  .step p b{ color:var(--text); font-weight:600; }
   @media (max-width:760px){
-    .step{ grid-template-columns:56px 1fr; }
-    .step p{ grid-column:2; }
+    .step{ grid-template-columns:1fr; gap:10px; }
   }
 
-  /* ---------- PRICING ---------- */
-  .pricing{ background:var(--bg-soft); border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); }
-  .pricing-grid{
+  /* ---------- AD EXAMPLES (light) ---------- */
+  .examples{ background:var(--paper); color:var(--ink); }
+  .ad-grid{
     margin-top:52px;
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
     gap:24px;
   }
-  .price-card{
-    position:relative;
-    background:var(--bg);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:40px 36px;
-    display:flex;
-    flex-direction:column;
-  }
-  .price-card.featured{ border-color:var(--white); background:var(--surface); }
-  .price-card .badge{
-    position:absolute;
-    top:-13px;
-    left:36px;
+  .ad{
     background:var(--white);
-    color:#0a0a09;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    padding:5px 12px;
-    border-radius:100px;
+    border:1px solid var(--paper-border);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 1px 2px rgba(21,20,15,0.04), 0 12px 32px -18px rgba(21,20,15,0.25);
   }
-  .price-name{ font-family:var(--display); font-size:1.2rem; font-weight:700; }
-  .price-desc{ margin-top:8px; color:var(--text-dim); font-size:14px; line-height:1.6; min-height:22px; }
-  .price-amount{ margin-top:24px; display:flex; align-items:baseline; gap:6px; }
-  .price-amount b{ font-family:var(--display); font-size:2.6rem; font-weight:800; }
-  .price-amount span{ color:var(--text-dim); font-size:14px; }
-  .price-features{ margin-top:28px; display:flex; flex-direction:column; gap:13px; flex:1; }
-  .price-features li{ display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-dim); line-height:1.5; }
-  .price-features li svg{ flex:none; width:16px; height:16px; margin-top:2px; color:var(--text); }
-  .price-features li.plus{ color:var(--text); font-weight:600; padding-bottom:2px; border-bottom:1px solid var(--border-soft); margin-bottom:2px; }
-  .price-note{ margin-top:22px; font-size:12.5px; color:var(--text-faint); line-height:1.6; }
-  .price-card .btn{ margin-top:24px; justify-content:center; }
-  @media (max-width:720px){ .pricing-grid{ grid-template-columns:1fr; } }
+  .ad-head{ display:flex; align-items:center; gap:10px; padding:14px 16px 10px; }
+  .ad-avatar{
+    width:36px; height:36px; border-radius:50%;
+    background:var(--ink); color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:13px;
+  }
+  .ad-name{ font-size:14px; font-weight:600; line-height:1.2; }
+  .ad-name span{ display:block; font-size:12px; font-weight:400; color:var(--ink-dim); }
+  .ad-copy{ padding:0 16px 14px; font-size:14px; line-height:1.55; }
+  .ad-img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:852 / 900;
+    object-fit:cover;
+    background:#e6e3da;
+  }
+  .ad-foot{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:12px 16px;
+    background:#f7f6f2;
+    border-top:1px solid var(--paper-border);
+  }
+  .ad-foot b{ display:block; font-size:14px; }
+  .ad-foot span{ font-size:12px; color:var(--ink-dim); }
+  .ad-cta{
+    flex:none;
+    padding:8px 14px; border-radius:6px;
+    background:#e6e3da; font-size:13px; font-weight:600;
+  }
+  .examples-note{ margin-top:24px; font-size:13px; color:var(--ink-dim); text-align:center; }
+  @media (max-width:900px){ .ad-grid{ grid-template-columns:1fr; max-width:420px; margin-left:auto; margin-right:auto; } }
 
-  /* ---------- WHY ---------- */
-  .why{ background:var(--bg); border-top:1px solid var(--border-soft); }
-  .why-grid{
-    margin-top:56px;
+  /* ---------- WHY ONLY £197 ---------- */
+  .why{ background:var(--bg); }
+  .why .wrap{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:44px 48px;
+    gap:56px;
+    align-items:start;
   }
-  .why-item{ display:flex; gap:20px; }
+  .why-quote{
+    font-family:var(--display);
+    font-size:clamp(1.3rem,2.4vw,1.65rem);
+    font-weight:600;
+    line-height:1.4;
+    letter-spacing:-0.01em;
+  }
+  .why-quote .dim{ color:var(--text-dim); }
+  .why-sign{ margin-top:22px; font-size:14px; color:var(--text-dim); }
+  .why-list{ display:flex; flex-direction:column; gap:28px; }
+  .why-item{ display:flex; gap:18px; }
   .why-icon{
     flex:none;
     width:44px; height:44px;
@@ -402,37 +578,119 @@
   }
   .why-icon svg{ width:20px; height:20px; }
   .why-item h4{ font-size:17px; font-weight:700; }
-  .why-item p{ margin-top:8px; color:var(--text-dim); font-size:15px; line-height:1.65; }
-  @media (max-width:720px){ .why-grid{ grid-template-columns:1fr; } }
+  .why-item p{ margin-top:6px; color:var(--text-dim); font-size:15px; line-height:1.65; }
+  @media (max-width:860px){ .why .wrap{ grid-template-columns:1fr; } }
 
-  /* ---------- INDUSTRIES ---------- */
-  .industries{ background:var(--bg-soft); border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); }
-  .tag-cloud{
-    margin-top:44px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
+  /* ---------- PREVIOUS WORK ---------- */
+  .work{ background:var(--bg-soft); border-top:1px solid var(--border-soft); }
+  .work-grid{
+    margin-top:52px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
   }
-  .tag-pill{
-    padding:11px 20px;
+  .work-card{
+    background:var(--bg);
     border:1px solid var(--border);
-    border-radius:100px;
-    font-size:14px;
-    font-weight:500;
-    color:var(--text-dim);
-    background:var(--surface);
-  }
-  .region-line{
-    margin-top:28px;
+    border-radius:14px;
+    overflow:hidden;
     display:flex;
-    align-items:center;
-    gap:10px;
-    color:var(--text-faint);
-    font-size:13px;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
+    flex-direction:column;
   }
-  .region-line svg{ width:14px; height:14px; }
+  .work-shot{
+    display:block;
+    background:var(--paper);
+    border-bottom:1px solid var(--border);
+    cursor:zoom-in;
+  }
+  .work-shot img{ width:100%; height:auto; aspect-ratio:2 / 1; object-fit:cover; object-position:left top; }
+  .work-body{ padding:24px; }
+  .work-card h3{ font-size:18px; font-weight:700; }
+  .work-tag{ display:block; margin-top:6px; font-size:13px; color:var(--text-dim); }
+  .work-stats{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--border-soft);
+    border:1px solid var(--border-soft);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .work-stats div{ background:var(--bg); padding:14px; }
+  .work-stats b{ display:block; font-family:var(--display); font-size:1.3rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .work-stats span{ display:block; margin-top:2px; font-size:12px; color:var(--text-dim); }
+  .work-foot{ margin-top:24px; max-width:760px; font-size:13px; color:var(--text-faint); line-height:1.6; }
+  @media (max-width:980px){ .work-grid{ grid-template-columns:1fr; max-width:620px; } }
+
+  /* ---------- PRICING ---------- */
+  .pricing{ background:var(--bg); border-top:1px solid var(--border-soft); }
+  .price-card{
+    position:relative;
+    max-width:560px;
+    margin:52px auto 0;
+    background:var(--surface);
+    border:1px solid var(--white);
+    border-radius:16px;
+    padding:44px 40px 36px;
+  }
+  .price-card .badge{
+    position:absolute;
+    top:-13px;
+    left:40px;
+    background:var(--white);
+    color:#0a0a09;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:100px;
+  }
+  .price-name{ font-family:var(--display); font-size:1.25rem; font-weight:700; }
+  .price-desc{ margin-top:8px; color:var(--text-dim); font-size:14px; line-height:1.6; }
+  .price-amount{ margin-top:24px; display:flex; align-items:baseline; gap:6px; }
+  .price-amount b{ font-family:var(--display); font-size:3.2rem; font-weight:800; letter-spacing:-0.03em; }
+  .price-amount span{ color:var(--text-dim); font-size:15px; }
+  .price-spend{ margin-top:4px; font-size:13.5px; color:var(--text-dim); }
+  .price-features{ margin-top:28px; display:flex; flex-direction:column; gap:13px; }
+  .price-features li{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; line-height:1.5; }
+  .price-actions{ margin-top:30px; display:flex; flex-direction:column; gap:12px; }
+  .price-actions .btn{ justify-content:center; }
+  .guarantee{
+    margin-top:24px;
+    display:flex; gap:14px; align-items:flex-start;
+    padding:18px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:var(--bg);
+  }
+  .guarantee svg{ flex:none; width:26px; height:26px; color:var(--accent); }
+  .guarantee b{ display:block; font-size:14.5px; }
+  .guarantee span{ display:block; margin-top:3px; font-size:13.5px; color:var(--text-dim); line-height:1.55; }
+  .price-note{ margin-top:20px; font-size:12.5px; color:var(--text-faint); line-height:1.6; }
+  @media (max-width:520px){ .price-card{ padding:40px 22px 28px; } .price-card .badge{ left:22px; } }
+
+  /* ---------- FAQ ---------- */
+  .faq{ background:var(--bg-soft); border-top:1px solid var(--border-soft); }
+  .faq-list{ margin-top:48px; max-width:820px; border-top:1px solid var(--border-soft); }
+  .faq-list details{ border-bottom:1px solid var(--border-soft); }
+  .faq-list summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:22px 0;
+    font-family:var(--display);
+    font-weight:600;
+    font-size:17px;
+  }
+  .faq-list summary::-webkit-details-marker{ display:none; }
+  .faq-list summary svg{ flex:none; width:18px; height:18px; color:var(--text-dim); transition:transform .2s ease; }
+  .faq-list details[open] summary svg{ transform:rotate(45deg); }
+  .faq-list details p{ padding:0 40px 24px 0; color:var(--text-dim); font-size:15px; line-height:1.7; }
 
   /* ---------- BREATHER (light) ---------- */
   .breather{
@@ -442,31 +700,18 @@
     padding:110px 0;
   }
   .breather h2{
+    margin:16px auto 0;
     font-size:clamp(1.8rem, 4.2vw, 2.6rem);
     font-weight:700;
-    max-width:640px;
-    margin:0 auto;
+    max-width:680px;
     color:var(--ink);
   }
-  .breather .btn{ margin-top:36px; }
-
-  /* ---------- FINAL CTA ---------- */
-  .final-cta{
-    background:var(--bg);
-    border-top:1px solid var(--border-soft);
-    padding:64px 0;
-  }
-  .final-cta .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-    flex-wrap:wrap;
-  }
-  .final-cta h2{ font-size:clamp(1.4rem,3vw,1.9rem); font-weight:700; max-width:520px; }
+  .breather p.sub{ margin:16px auto 0; max-width:520px; color:var(--ink-dim); font-size:16px; line-height:1.6; }
+  .breather-actions{ margin-top:34px; display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
+  .breather .fine{ color:var(--ink-dim); }
 
   /* ---------- FOOTER ---------- */
-  footer{ background:var(--bg); padding:72px 0 32px; }
+  footer{ background:var(--bg); padding:72px 0 32px; border-top:1px solid var(--border-soft); }
   .foot-top{
     display:grid;
     grid-template-columns:1.4fr 1fr 1fr;
@@ -477,6 +722,7 @@
   }
   .foot-brand-mark .brand-mark{ width:38px; height:38px; }
   .foot-wordmark{
+    margin-top:16px;
     font-family:var(--display);
     font-weight:800;
     font-size:clamp(1.8rem,3.4vw,2.4rem);
@@ -484,20 +730,22 @@
   }
   .foot-tag{ margin-top:18px; max-width:340px; color:var(--text-dim); font-size:15px; line-height:1.6; }
   .foot-col h5{
+    margin:0 0 18px;
     font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
-    color:var(--text-faint); font-weight:600; margin-bottom:18px;
+    color:var(--text-faint); font-weight:600;
   }
   .foot-col ul{ display:flex; flex-direction:column; gap:12px; }
-  .foot-col a{ color:var(--text-dim); font-size:14px; }
+  .foot-col a, .foot-col li{ color:var(--text-dim); font-size:14px; }
   .foot-col a:hover{ color:var(--text); }
-  .foot-socials{ display:flex; gap:10px; margin-top:18px; }
-  .foot-social{
-    width:36px; height:36px; border:1px solid var(--border); border-radius:8px;
-    display:flex; align-items:center; justify-content:center; color:var(--text-dim);
+  .foot-legal{
+    margin-top:56px;
+    font-size:12.5px;
+    color:var(--text-faint);
+    line-height:1.7;
+    max-width:860px;
   }
-  .foot-social svg{ width:16px; height:16px; }
   .foot-bottom{
-    margin-top:64px;
+    margin-top:24px;
     padding-top:24px;
     border-top:1px solid var(--border-soft);
     display:flex;
@@ -509,11 +757,11 @@
   }
   @media (max-width:760px){
     .foot-top{ grid-template-columns:1fr 1fr; }
-    .foot-brand-mark{ grid-column:1 / -1; }
+    .foot-top > div:first-child{ grid-column:1 / -1; }
   }
 
   /* ---------- MOBILE NAV ---------- */
-  @media (max-width:860px){
+  @media (max-width:980px){
     .nav-links{ display:none; }
     .menu-toggle{ display:flex; }
     .nav.open .nav-links{
@@ -535,35 +783,34 @@
       padding:13px 0;
       text-align:center;
       background:var(--white);
-      color:#0a0a09;
+      color:#0a0a09 !important;
       font-weight:600;
       border-radius:8px;
       border-top:none !important;
     }
-  }
-  @media (max-width:520px){
-    .hero-actions .btn{ width:100%; justify-content:center; }
+    .nav-mobile-cta.alt{ background:none; color:var(--text) !important; border:1px solid var(--border) !important; }
   }
 </style>
 </head>
 <body>
 
-
 <header class="nav" id="site-nav">
   <div class="wrap">
     <a href="#top" class="brand"><span class="brand-mark"><svg viewBox="0 0 114 112" fill="none" stroke-linecap="butt" stroke-linejoin="miter"><polyline points="2,104 19,86 36,104" stroke="#201e1d" stroke-width="9"/><polyline points="41,104 58,71 75,104" stroke="#201e1d" stroke-width="9"/><polyline points="80,104 97,56 114,104" stroke="#ec3013" stroke-width="9"/></svg></span>RAI SCALING</a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
+      <a href="#whats-included">What You Get</a>
+      <a href="#process">How It Works</a>
+      <a href="#who-its-for">Who It's For</a>
       <a href="#pricing">Pricing</a>
-      <a href="/results">Results</a>
-      <a href="#why-us">Why Us</a>
-      <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="nav-mobile-cta">Book a Free Call</a>
+      <a href="#previous-work">Previous Work</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="nav-mobile-cta">Book a 15-Min Call</a>
+      <a href="https://whop.com/checkout/plan_77MuvFpAExHP5" class="nav-mobile-cta alt">Get Started &middot; &pound;197/mo</a>
     </nav>
     <div class="nav-right">
       <div class="nav-cta-group">
-        <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-ghost">See How It Works</a>
-        <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a Free Call</a>
+        <a href="https://whop.com/checkout/plan_77MuvFpAExHP5" class="btn btn-ghost">Get Started</a>
+        <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a 15-Min Call</a>
       </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -573,245 +820,458 @@
 </header>
 
 <main>
+  <!-- ========== HERO ========== -->
   <section class="hero" id="top">
-    <div class="hero-bg-mark"><svg viewBox="0 0 114 112" fill="none" stroke="var(--border-soft)" stroke-width="3" stroke-linecap="butt" stroke-linejoin="miter"><polyline points="2,104 19,86 36,104"/><polyline points="41,104 58,71 75,104"/><polyline points="80,104 97,56 114,104"/></svg></div>
     <div class="wrap">
-      <p class="eyebrow">Meta Ads &amp; Growth Systems for Home Service Businesses</p>
-      <h1>We get you jobs.<br>Every lead worked.<br><span class="dim">Every single month.</span></h1>
-      <p class="hero-sub">Rai Scaling runs the Meta Ads that bring new jobs to your business, backed by the review engine, reactivation system, and CRM follow-up that make sure none of them slip through the cracks. Live in 48 hours.</p>
-      <p class="hero-trust">Got a text from us and want to know what this actually is? <a href="#pricing">See exactly what's included and what it costs &rarr;</a></p>
-      <div class="hero-actions">
-        <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a Free Strategy Call
+      <div>
+        <span class="hero-badge"><span class="dot"></span>For UK local service businesses</span>
+        <h1>Facebook &amp; Instagram ads, done for you.<br><span class="dim">&pound;197 a month.</span></h1>
+        <p class="hero-sub">We make your ads, launch them and optimise them every week, so you can stay on the tools. <b>Ad spend is separate</b> and paid directly to Meta, from &pound;5 a day.</p>
+        <ul class="hero-checks">
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Fully done for you</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Your ad account, your leads</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>No contract. Cancel any time</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>14-day money-back guarantee</li>
+        </ul>
+        <div class="hero-actions">
+          <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a 15-Min Call
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://whop.com/checkout/plan_77MuvFpAExHP5" class="btn btn-ghost">Get Started &middot; &pound;197/mo</a>
+        </div>
+        <p class="hero-trust">Got a message from us? <a href="#whats-included">See exactly what's included and what it costs &rarr;</a></p>
+      </div>
+
+      <div class="poster" aria-label="Offer summary">
+        <div class="poster-mark"><svg viewBox="0 0 114 112" fill="none" stroke="var(--border)" stroke-width="3"><polyline points="2,104 19,86 36,104"/><polyline points="41,104 58,71 75,104"/><polyline points="80,104 97,56 114,104"/></svg></div>
+        <p class="eyebrow">The offer</p>
+        <p class="poster-title">Meta Ads<br>Done For You</p>
+        <div class="poster-price"><b>&pound;197</b><span>/month</span></div>
+        <p class="poster-note">Flat fee. No setup fee. Ad spend separate, paid to Meta.</p>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Ad images, videos &amp; copy made for you</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Targeting, launch &amp; weekly optimisation</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>CRM with missed-call text-back included</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>WhatsApp support during UK hours</li>
+        </ul>
+        <a href="https://whop.com/checkout/plan_77MuvFpAExHP5" class="btn btn-primary">Get Started Now
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="#services" class="btn btn-ghost">See What's Included</a>
       </div>
     </div>
   </section>
 
-  <section class="stats">
+  <!-- ========== POSITIONING STRIP ========== -->
+  <section class="strip">
     <div class="wrap">
-      <div class="stat"><b>$50K+</b><span>Ad spend managed</span></div>
-      <div class="stat"><b>30+</b><span>Businesses scaled</span></div>
-      <div class="stat"><b>650+</b><span>Booked calls generated</span></div>
+      <div class="strip-item">UK hours<span>Mon&ndash;Fri, 9am&ndash;6pm</span></div>
+      <div class="strip-item">No lock-in<span>Monthly rolling</span></div>
+      <div class="strip-item">No setup fee<span>One flat monthly price</span></div>
+      <div class="strip-item">No cut of spend<span>&pound;0 taken from your budget</span></div>
     </div>
   </section>
 
-  <section class="services" id="services">
+  <!-- ========== WHAT YOU GET ========== -->
+  <section class="services" id="whats-included">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">What's included</p>
-        <h2>One system built to get you jobs.</h2>
-        <p>Rai Scaling runs the Meta campaigns that bring new leads in the door, then backs them with the reviews, reactivation, and follow-up that turn a full pipeline into a full calendar.</p>
+        <p class="eyebrow">What you get</p>
+        <h2>See exactly what you get for &pound;197.</h2>
+        <p>Everything it takes to run Facebook and Instagram ads for a local business, handled by us. You approve the ads and answer the enquiries.</p>
       </div>
       <div class="service-grid">
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
-          </div>
-          <h3>Meta Ads &amp; Lead Generation</h3>
-          <p>High-intent campaigns that put your offer in front of homeowners who are ready to book &mdash; with every lead routed straight into your pipeline.</p>
-          <p class="service-tag">Campaign Setup / Creative / Lead Ads</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+          <h3>Campaign setup &amp; targeting</h3>
+          <p>We build your campaigns, set up targeting around your service area and launch them for you.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9 6.8 19.2l1-5.9L3.5 9.2l5.9-.8L12 3Z"/></svg>
-          </div>
-          <h3>Review &amp; Reputation Engine</h3>
-          <p>Every completed job triggers an automatic review request by SMS and email &mdash; so your Google rating keeps building without anyone chasing it down.</p>
-          <p class="service-tag">Automated Requests / Reminders / Tracking</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5-5-8 8"/></svg></div>
+          <h3>Ads made for you</h3>
+          <p>Ad images, short videos and copy, made from your job photos. Unlimited revisions, and nothing goes live until you approve it.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5m0 14h16M4 15l4-4 3 3 5-6 4 4"/></svg>
-          </div>
-          <h3>Past-Customer Reactivation</h3>
-          <p>Your customer list is an asset sitting untouched. We run monthly campaigns that turn old customers back into booked appointments.</p>
-          <p class="service-tag">Monthly Campaigns / SMS &amp; Email</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5m0 14h16M4 15l4-4 3 3 5-6 4 4"/></svg></div>
+          <h3>Weekly optimisation</h3>
+          <p>Every week we check spend and lead quality, pause what isn't working and add fresh creative.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          </div>
-          <h3>CRM, Missed-Call Recovery &amp; Booking</h3>
-          <p>Every call, form, and message lands in one pipeline. Missed calls get an instant text back, and leads get followed up automatically until they book.</p>
-          <p class="service-tag">Pipeline / Missed-Call Text-Back / Reminders</p>
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h3>Your account, your data</h3>
+          <p>Ads run in your own Meta ad account. You keep the account, the data and the leads, and we never take a cut of your spend.</p>
         </div>
-        <div class="service-card wide">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
+          <h3>Lead form &amp; CRM included</h3>
+          <p>A lead form with qualifying questions, with every enquiry sent to your own GoHighLevel CRM. Missed-call text-back and review requests are included.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></div>
+          <h3>Monthly call &amp; WhatsApp support</h3>
+          <p>A 20-minute review call every month, plus WhatsApp support during UK hours (Mon&ndash;Fri, 9am&ndash;6pm).</p>
+        </div>
+      </div>
+      <p class="extras-note"><b>Need more than ads?</b> We also build conversion landing pages, AI lead follow-up and appointment setting, and Google Business Profile and review campaigns. These aren't part of the &pound;197 plan and are billed separately. Ask us on your call.</p>
+    </div>
+  </section>
+
+  <!-- ========== PREVIOUS WORK ========== -->
+  <section class="work" id="previous-work">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Previous client work &middot; USA</p>
+        <h2>Real Meta Ads accounts we've run.</h2>
+        <p>Before launching in the UK, we ran Facebook and Instagram ads for home service businesses in the United States. These screenshots come straight from those clients' Ads Manager accounts. Click any one to see it full size.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <a class="work-shot" href="images/results-riverside-roofing.jpg" target="_blank" rel="noopener"><img src="images/results-riverside-roofing.jpg" width="1774" height="887" loading="lazy" alt="Meta Ads Manager campaign dashboard for Riverside Construction's roofing leads campaign"></a>
+          <div class="work-body">
+            <h3>Riverside Construction</h3>
+            <span class="work-tag">Roofing &middot; USA &middot; Aug 2024</span>
+            <div class="work-stats">
+              <div><b>176</b><span>Leads</span></div>
+              <div><b>$7.30</b><span>Cost / lead</span></div>
+              <div><b>$1,285</b><span>Ad spend</span></div>
+              <div><b>+56%</b><span>Leads vs prior 30d</span></div>
+            </div>
           </div>
-          <div class="wide-body">
-            <h3>SEO-Ready Website</h3>
-            <p>A mobile-first site built around your services and service area &mdash; quote form, click-to-call, and Google Business Profile connected from day one, so every ad has somewhere solid to land.</p>
-            <p class="service-tag">Home / Services / Service Areas / Contact</p>
+        </article>
+        <article class="work-card">
+          <a class="work-shot" href="images/results-greenleaf-tree.jpg" target="_blank" rel="noopener"><img src="images/results-greenleaf-tree.jpg" width="1774" height="887" loading="lazy" alt="Meta Ads Manager ad set dashboard for GreenLeaf Tree Service"></a>
+          <div class="work-body">
+            <h3>GreenLeaf Tree Service</h3>
+            <span class="work-tag">Tree service &middot; USA &middot; Aug 2024</span>
+            <div class="work-stats">
+              <div><b>243</b><span>Leads</span></div>
+              <div><b>$7.78</b><span>Cost / lead</span></div>
+              <div><b>$1,892</b><span>Ad spend</span></div>
+              <div><b>+72%</b><span>Leads vs prior 30d</span></div>
+            </div>
           </div>
+        </article>
+        <article class="work-card">
+          <a class="work-shot" href="images/results-lumenscape-lighting.jpg" target="_blank" rel="noopener"><img src="images/results-lumenscape-lighting.jpg" width="1400" height="700" loading="lazy" alt="Meta Ads Manager campaign dashboard for LumenScape Outdoor Lighting"></a>
+          <div class="work-body">
+            <h3>LumenScape Outdoor Lighting</h3>
+            <span class="work-tag">Outdoor lighting &middot; USA &middot; Aug 2024</span>
+            <div class="work-stats">
+              <div><b>100</b><span>Leads</span></div>
+              <div><b>$14.83</b><span>Cost / lead</span></div>
+              <div><b>$1,483</b><span>Ad spend</span></div>
+              <div><b>+43%</b><span>Leads vs prior 30d</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="work-foot">US results in US dollars, from previous client work. These are not typical or guaranteed results for UK clients. Your results will depend on your offer, area, budget and follow-up speed.</p>
+    </div>
+  </section>
+
+  <!-- ========== AGENCY VS US ========== -->
+  <section class="compare" id="why-us">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Agency vs us</p>
+        <h2>Most agencies take a cut, lock you in and keep your account.</h2>
+        <p>We charge one flat monthly fee. Here's the difference.</p>
+      </div>
+      <div class="compare-table">
+        <div class="compare-row head"><div></div><div>Typical agency</div><div>Rai Scaling</div></div>
+        <div class="compare-row">
+          <div>Monthly fee</div>
+          <div>&pound;800+ a month</div>
+          <div><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>&pound;197 flat</div>
+        </div>
+        <div class="compare-row">
+          <div>Cut of your ad spend</div>
+          <div>Often 10&ndash;20%</div>
+          <div><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>&pound;0</div>
+        </div>
+        <div class="compare-row">
+          <div>Contract</div>
+          <div>6&ndash;12 months</div>
+          <div><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>None. Cancel any time</div>
+        </div>
+        <div class="compare-row">
+          <div>Who owns the ad account</div>
+          <div>Often the agency</div>
+          <div><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>You do</div>
+        </div>
+        <div class="compare-row">
+          <div>Setup fee</div>
+          <div>Common</div>
+          <div><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>None</div>
+        </div>
+        <div class="compare-row">
+          <div>Leads filtered with qualifying questions</div>
+          <div>Sometimes</div>
+          <div><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Always</div>
+        </div>
+        <div class="compare-row">
+          <div>Money-back guarantee</div>
+          <div>Rarely</div>
+          <div><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>14 days</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== WHO IT'S FOR ========== -->
+  <section class="industries" id="who-its-for">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Who it's for</p>
+        <h2>Built for UK trades and local services.</h2>
+        <p>One- to three-person firms that do good work and want a steady stream of local enquiries, without paying agency prices.</p>
+      </div>
+      <div class="trade-grid">
+        <div class="trade-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>
+          <h3>Roofers</h3>
+          <p>Repairs, re-roofs, flat roofs, guttering.</p>
+        </div>
+        <div class="trade-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V12"/><path d="M12 12C12 7 8 4 4 4c0 5 3 8 8 8Z"/><path d="M12 14c0-4 3-7 8-7 0 4-3 7-8 7Z"/></svg>
+          <h3>Landscapers</h3>
+          <p>Garden makeovers, turfing, fencing.</p>
+        </div>
+        <div class="trade-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v6M15 9v6M9 15v6"/></svg>
+          <h3>Driveways &amp; patios</h3>
+          <p>Block paving, resin, patios, tarmac.</p>
+        </div>
+        <div class="trade-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3Z"/><path d="M19 15l.8 1.7 1.7.8-1.7.8L19 20l-.8-1.7-1.7-.8 1.7-.8L19 15Z"/></svg>
+          <h3>Cleaners</h3>
+          <p>Domestic, end-of-tenancy, carpets.</p>
+        </div>
+        <div class="trade-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h9l2 2h3"/><path d="M17 10l4-2v6l-4-2"/><path d="M6 8V5h4v3"/><path d="M8 14v2M5 17v2M11 17v2M8 20v1"/></svg>
+          <h3>Pressure washers</h3>
+          <p>Driveways, decking, render, roofs.</p>
+        </div>
+      </div>
+      <div class="also">
+        <span class="label">Also working with:</span>
+        <span class="tag-pill">Fencing</span>
+        <span class="tag-pill">Window cleaners</span>
+        <span class="tag-pill">Painters &amp; decorators</span>
+        <span class="tag-pill">Tree surgeons</span>
+        <span class="tag-pill">Gutter cleaning</span>
+        <span class="tag-pill">Other local services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
   <section class="process" id="process">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">How it works</p>
-        <h2>From a strategy call to new jobs on your calendar.</h2>
+        <h2>The launch process.</h2>
+        <p>Live in about a week. It takes about 30 minutes of your time.</p>
       </div>
       <div class="steps">
         <div class="step">
-          <div class="step-num">01</div>
-          <h3>Book Your Call</h3>
-          <p>We look at your business, service area, and what you're currently doing for leads and follow-up &mdash; then map out your system.</p>
+          <div class="step-num">Day 1</div>
+          <h3>Sign up &amp; tell us about your business</h3>
+          <p>You'll get a short onboarding form for your services, area, offer and a few job photos. <b>You:</b> fill it in and book your onboarding call.</p>
         </div>
         <div class="step">
-          <div class="step-num">02</div>
-          <h3>We Launch Your Campaigns &amp; System</h3>
-          <p>Your Meta Ads, CRM, review engine, and reactivation campaigns get built, connected, and launched around your business specifically.</p>
+          <div class="step-num">Days 1&ndash;3</div>
+          <h3>15-minute onboarding call</h3>
+          <p>We agree on the plan and you give us partner access to your Facebook Page and ad account. <b>We never ask for passwords.</b></p>
         </div>
         <div class="step">
-          <div class="step-num">03</div>
-          <h3>You Go Live</h3>
-          <p>Typically within 48 hours of onboarding &mdash; you'll see exactly what's live before it goes live.</p>
+          <div class="step-num">Days 2&ndash;7</div>
+          <h3>We build your ads, you approve them</h3>
+          <p>We make your ad images, video and copy, set up your lead form and CRM, then send everything to you on WhatsApp. <b>You:</b> approve it, and we launch once Meta has reviewed it.</p>
         </div>
         <div class="step">
-          <div class="step-num">04</div>
-          <h3>You Get The Jobs</h3>
-          <p>Leads get answered instantly, past customers get reactivated monthly, and new jobs land on your calendar &mdash; automatically.</p>
+          <div class="step-num">Week 2+</div>
+          <h3>We optimise every week</h3>
+          <p>We check spend and lead quality every Monday, pause the losers and add fresh creative every two weeks. Each month you get a 20-minute review call and a one-page report.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="pricing" id="pricing">
+  <!-- ========== AD EXAMPLES ========== -->
+  <section class="examples" id="examples">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">What it costs</p>
-        <h2>Two plans. No setup fee. No surprises.</h2>
-        <p>We keep this simple on purpose &mdash; pick the plan that matches where your business is right now.</p>
+      <div class="sec-head on-light center">
+        <p class="eyebrow on-light">Your ad. Their feed.</p>
+        <h2>Ads built from your own job photos.</h2>
+        <p>Simple, honest ads that show your real work to homeowners in your area, on Facebook and Instagram.</p>
       </div>
-      <div class="pricing-grid">
-        <div class="price-card">
-          <p class="price-name">Foundation</p>
-          <p class="price-desc">Get your marketing infrastructure installed.</p>
-          <div class="price-amount"><b>$297</b><span>/month</span></div>
-          <ul class="price-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>SEO-ready contractor website</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>CRM &amp; pipeline</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Automated review requests</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Past-customer reactivation</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Missed-call text back</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Lead follow-up automation</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Appointment booking &amp; reminders</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Basic monthly reporting</li>
-          </ul>
-          <p class="price-note">Best for: businesses that need the infrastructure in place before adding paid leads.</p>
-          <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-ghost">Book a Free Call</a>
-        </div>
-        <div class="price-card featured">
-          <span class="badge">Most Popular</span>
-          <p class="price-name">Growth</p>
-          <p class="price-desc">Turn the system into a lead-generation engine.</p>
-          <div class="price-amount"><b>$497</b><span>/month</span></div>
-          <ul class="price-features">
-            <li class="plus">Everything in Foundation, plus:</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Meta Ads setup &amp; management</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>AI-assisted ad copy &amp; 3&ndash;5 creatives/month</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Lead qualification</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Campaign monitoring &amp; optimization</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Lost-lead &amp; estimate follow-up</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Advanced reporting</li>
-          </ul>
-          <p class="price-note">Ad spend billed separately, paid directly to Meta. Best for: businesses ready to generate new leads every month, not just work the ones they already have.</p>
-          <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a Free Call</a>
-        </div>
+      <div class="ad-grid">
+        <article class="ad">
+          <div class="ad-head"><div class="ad-avatar">NR</div><div class="ad-name">Northside Roofing<span>Sponsored</span></div></div>
+          <p class="ad-copy">New roof, repair or just a leak that won't go away? We're a local, family-run team covering your area. Free, no-obligation quotes this month.</p>
+          <img class="ad-img" src="images/ad-roofing.jpg" width="852" height="900" loading="lazy" alt="Northside Roofing ad: before and after of a mossy roof replaced with new tiles, with a Book a Free Roof Check button">
+          <div class="ad-foot"><div><b>Book your free roof check</b><span>Local &middot; Fully insured</span></div><span class="ad-cta">Get quote</span></div>
+        </article>
+        <article class="ad">
+          <div class="ad-head"><div class="ad-avatar">GL</div><div class="ad-name">Greenline Landscapes<span>Sponsored</span></div></div>
+          <p class="ad-copy">From overgrown to outdoor room in a week. Patios, turf and fencing done properly. Taking a few more spring bookings in your area.</p>
+          <img class="ad-img" src="images/ad-landscaping.jpg" width="852" height="900" loading="lazy" alt="Greenline Landscapes ad: before and after of an overgrown garden turned into a lit patio and lawn, with a Get a Free Design Visit button">
+          <div class="ad-foot"><div><b>See what your garden could look like</b><span>Free design visit</span></div><span class="ad-cta">Learn more</span></div>
+        </article>
+        <article class="ad">
+          <div class="ad-head"><div class="ad-avatar">BD</div><div class="ad-name">Brightside Driveways<span>Sponsored</span></div></div>
+          <p class="ad-copy">Tired of weeds and sunken blocks? Block paving and resin driveways, laid by a local team with a written guarantee.</p>
+          <img class="ad-img" src="images/ad-driveways.jpg" width="852" height="900" loading="lazy" alt="Brightside Driveways ad: before and after of a weedy driveway relaid with new block paving, with a Get a Free Driveway Quote button">
+          <div class="ad-foot"><div><b>Get a free driveway quote</b><span>Local &middot; Guaranteed work</span></div><span class="ad-cta">Get quote</span></div>
+        </article>
       </div>
+      <p class="examples-note">Example ads for illustration only. Business names are fictional.</p>
     </div>
   </section>
 
-  <section class="why" id="why-us">
+  <!-- ========== WHY ONLY £197 ========== -->
+  <section class="why">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Why Rai Scaling</p>
-        <h2>Built to get you jobs.</h2>
-        <p>Not just another marketing vendor &mdash; the team that turns your ad spend into appointments on your calendar.</p>
+      <div>
+        <p class="eyebrow">Why is it only &pound;197?</p>
+        <p class="why-quote" style="margin-top:18px;">No sales team. No commission. No 12-month contract. <span class="dim">You see the price, you see what's included and you sign up when you're ready. Try it for 14 days, and if it's not for you, you get your money back.</span></p>
+        <p class="why-sign">Udit Rai, Founder, Rai Scaling</p>
       </div>
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
-          <div>
-            <h4>We get you jobs, not just leads</h4>
-            <p>Every campaign is optimized toward one number: booked, showed-up appointments on your calendar &mdash; not clicks, and not cost-per-lead in isolation.</p>
-          </div>
-        </div>
+      <div class="why-list">
         <div class="why-item">
           <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></div>
           <div>
-            <h4>One system, not five vendors</h4>
-            <p>Ads, CRM, reviews, and reactivation &mdash; all under one roof. No agencies pointing fingers at each other, and no black box you can't see into.</p>
+            <h4>A system, not a sales team</h4>
+            <p>Templates, a proven onboarding process and a CRM we've already built mean we can run your ads well without agency overheads.</p>
           </div>
         </div>
         <div class="why-item">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
           <div>
-            <h4>You see exactly what you're paying for</h4>
-            <p>Two plans, both listed with real prices on this page. No vague "marketing services" retainer, no surprise scope creep.</p>
+            <h4>Support when you need it</h4>
+            <p>Message us on WhatsApp during UK hours (Mon&ndash;Fri, 9am&ndash;6pm). Ads, approvals and questions all happen in one chat.</p>
           </div>
         </div>
         <div class="why-item">
-          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/></svg></div>
           <div>
-            <h4>Live in 48 hours</h4>
-            <p>Not a six-week build. Your system gets installed fast because it's built once and configured for your business, not designed from scratch.</p>
+            <h4>Honest about results</h4>
+            <p>We don't promise a number of leads or a cost per lead. Results depend on your offer, area, budget and how fast you follow up. You'll see the real numbers every month.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="industries" id="industries">
+  <!-- ========== PRICING ========== -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow">Pricing</p>
+        <h2>One plan. One price. No surprises.</h2>
+      </div>
+      <div class="price-card">
+        <span class="badge">Done for you</span>
+        <p class="price-name">Meta Ads &mdash; Done For You</p>
+        <p class="price-desc">Facebook and Instagram ads for UK local service businesses.</p>
+        <div class="price-amount"><b>&pound;197</b><span>/month</span></div>
+        <p class="price-spend">Ad spend is separate and paid directly to Meta, from &pound;5/day. We recommend &pound;10/day or more.</p>
+        <ul class="price-features">
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Campaign setup, targeting, launch &amp; weekly optimisation</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Ad images, short videos &amp; copy, with unlimited revisions</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>You approve every ad before it goes live</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Runs in your own ad account, with no cut of your spend</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Lead form with qualifying questions, plus a GoHighLevel CRM with missed-call text-back &amp; review requests</li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Monthly 20-minute review call &amp; WhatsApp support during UK hours</li>
+        </ul>
+        <div class="price-actions">
+          <a href="https://whop.com/checkout/plan_77MuvFpAExHP5" class="btn btn-primary">Get Started Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-ghost">Prefer to talk first? Book a 15-min call</a>
+        </div>
+        <div class="guarantee">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/></svg>
+          <div><b>14-day money-back guarantee</b><span>If it's not for you within 14 days of your first payment, tell us and you'll get your fee back. No contract, so you can cancel any time after that.</span></div>
+        </div>
+        <p class="price-note">No setup fee. Landing pages, AI lead follow-up and Google Business Profile and review campaigns are available, billed separately. Secure checkout via Whop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq" id="faq">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Who we work with</p>
-        <h2>Built for the trades that keep homes running.</h2>
-        <p>If your business books jobs by the appointment, Rai Scaling has a system for it.</p>
+        <p class="eyebrow">Common questions</p>
+        <h2>Straight answers.</h2>
       </div>
-      <div class="tag-cloud">
-        <span class="tag-pill">Roofing</span>
-        <span class="tag-pill">HVAC</span>
-        <span class="tag-pill">Plumbing</span>
-        <span class="tag-pill">Foundation Repair</span>
-        <span class="tag-pill">Concrete &amp; Leveling</span>
-        <span class="tag-pill">Tree Service</span>
-        <span class="tag-pill">Outdoor Living</span>
-        <span class="tag-pill">Landscaping &amp; Hardscaping</span>
-        <span class="tag-pill">Electrical</span>
-        <span class="tag-pill">Pest Control</span>
-        <span class="tag-pill">Outdoor Lighting</span>
-        <span class="tag-pill">Garage Doors</span>
+      <div class="faq-list">
+        <details>
+          <summary>Is the ad spend included in the &pound;197?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>No. Your ad spend is separate and paid directly to Meta from your own card, in your own ad account. You can start from &pound;5 a day, but we recommend &pound;10 a day or more for local services.</p>
+        </details>
+        <details>
+          <summary>Do you take a cut of my ad spend?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Never. You pay us &pound;197 a month flat, whatever you spend on ads.</p>
+        </details>
+        <details>
+          <summary>Is there a contract?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>No. It's monthly rolling, and you can cancel any time.</p>
+        </details>
+        <details>
+          <summary>How does the 14-day money-back guarantee work?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>If you decide it's not for you within 14 days of your first payment, message us and we'll refund your &pound;197 fee. Money already spent on ads goes to Meta, not us, so we can't refund that part.</p>
+        </details>
+        <details>
+          <summary>Can you guarantee a number of leads?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>No, and you should be careful of anyone who does. Results depend on your offer, area, budget and how quickly you follow up. What we promise is the work: good ads, weekly optimisation and honest monthly reporting on spend, leads and cost per lead.</p>
+        </details>
+        <details>
+          <summary>Who owns the ad account?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>You do. Everything runs in your own Meta ad account and you give us partner access. We never ask for your password. If you leave, you keep the account, the ads, the data and the leads.</p>
+        </details>
+        <details>
+          <summary>Do I need to make the ads myself?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>No. We make the images and short videos, and write the copy, using your job photos. You approve every ad before it goes live, and revisions are unlimited.</p>
+        </details>
+        <details>
+          <summary>How quickly can my ads go live?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Usually within about a week of signing up. It depends on how quickly you approve the ads and on Meta's own ad review.</p>
+        </details>
+        <details>
+          <summary>Where do my leads go?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Leads fill in a short form with qualifying questions, then go straight into your own GoHighLevel CRM. That's included, along with missed-call text-back and automated review requests, so you get notified and nothing gets lost.</p>
+        </details>
+        <details>
+          <summary>When can I reach you?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>On WhatsApp during UK hours, Monday to Friday, 9am to 6pm. You also get a 20-minute review call every month.</p>
+        </details>
+        <details>
+          <summary>What do you need from me?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>A Facebook Page, a few photos of your work, a 15-minute onboarding call, quick approvals on WhatsApp and, most importantly, fast replies to your leads.</p>
+        </details>
+        <details>
+          <summary>Do you offer anything beyond ads?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <p>Yes. We build conversion landing pages, AI lead follow-up and appointment setting, and Google Business Profile and review campaigns. These are billed separately from the &pound;197 plan. Ask us about them on a call.</p>
+        </details>
       </div>
-      <p class="region-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
-        Proudly serving home service businesses across the United States &amp; Canada
-      </p>
     </div>
   </section>
 
-  <section class="breather">
+  <!-- ========== FINAL CTA ========== -->
+  <section class="breather" id="book-a-call">
     <div class="wrap">
-      <p class="eyebrow on-light">Free strategy call</p>
-      <h2>Ready to see what a full calendar feels like?</h2>
-      <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-dark">Book Your Free Strategy Call
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <section class="final-cta" id="book-a-call">
-    <div class="wrap">
-      <h2>Ready to fill your calendar with booked jobs?</h2>
-      <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-primary">Book a Free Strategy Call
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <p class="eyebrow on-light">Meta Ads done for you</p>
+      <h2>Your next jobs are scrolling Facebook tonight.</h2>
+      <p class="sub">Let's put your work in front of them. &pound;197 a month, no contract, 14 days to change your mind.</p>
+      <div class="breather-actions">
+        <a href="https://whop.com/checkout/plan_77MuvFpAExHP5" class="btn btn-dark">Get Started Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU" class="btn btn-outline-dark">Book a 15-Min Call</a>
+      </div>
+      <p class="fine">Ad spend is separate and paid directly to Meta.</p>
     </div>
   </section>
 </main>
@@ -824,37 +1284,34 @@
           <span class="brand-mark"><svg viewBox="0 0 114 112" fill="none" stroke-linecap="butt" stroke-linejoin="miter"><polyline points="2,104 19,86 36,104" stroke="#201e1d" stroke-width="9"/><polyline points="41,104 58,71 75,104" stroke="#201e1d" stroke-width="9"/><polyline points="80,104 97,56 114,104" stroke="#ec3013" stroke-width="9"/></svg></span>
         </div>
         <div class="foot-wordmark">RAI<br>SCALING</div>
-        <p class="foot-tag">Meta Ads, reviews, reactivation, and follow-up &mdash; installed as one system to get home service businesses more jobs across the U.S. &amp; Canada.</p>
-        <div class="foot-socials">
-          <a class="foot-social" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a class="foot-social" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 0 1 5 0V17"/></svg></a>
-          <a class="foot-social" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 10l4 2-4 2z"/></svg></a>
-        </div>
+        <p class="foot-tag">Facebook and Instagram ads, done for you, for UK local service businesses. &pound;197/month, no contract.</p>
       </div>
       <div class="foot-col">
         <h5>Sitemap</h5>
         <ul>
-          <li><a href="#top">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Process</a></li>
+          <li><a href="#whats-included">What You Get</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#who-its-for">Who It's For</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="/results">Results</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#industries">Industries</a></li>
+          <li><a href="#previous-work">Previous Work</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>Connect</h5>
         <ul>
-          <li><a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU">Book a Free Call</a></li>
+          <li><a href="https://whop.com/checkout/plan_77MuvFpAExHP5">Get Started</a></li>
+          <li><a href="https://api.raiscaling.com/widget/booking/NAvNpIeQeo2RboNvb9HU">Book a 15-Min Call</a></li>
           <li><a href="mailto:hello@raiscaling.com">hello@raiscaling.com</a></li>
-          <li><a href="#">United States &amp; Canada</a></li>
+          <li>Support: Mon&ndash;Fri, 9am&ndash;6pm UK</li>
+          <li><a href="/privacy">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
+    <p class="foot-legal">Results vary. We don't guarantee any number of leads, sales or a particular cost per lead. Results depend on your offer, area, budget and follow-up speed. Ad spend is separate from our fee and paid directly to Meta. Facebook and Instagram are trademarks of Meta Platforms, Inc. Rai Scaling is not affiliated with or endorsed by Meta.</p>
     <div class="foot-bottom">
       <span>&copy; 2026 Rai Scaling. All rights reserved.</span>
-      <span>Built to get you more jobs.</span>
+      <span>Serving UK local service businesses.</span>
     </div>
   </div>
 </footer>
